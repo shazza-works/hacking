@@ -1,0 +1,13 @@
+/* version 1.9 */
+
+.shadow { display:none; }
+.bottomShadow { display:none; }
+.noprint { display:none; }
+.yesprint { display:block }
+div #summary.closed { border:1px solid #32498D; clear:right}
+
+.pagebreak { display:block; page-break-before:always; }
+#Detail { page-break-before:avoid }
+
+
+

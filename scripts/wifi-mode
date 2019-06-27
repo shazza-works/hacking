@@ -1,0 +1,69 @@
+#!/bin/bash
+#########################################################################
+# Code By Shazza Works							#
+# Email; ogormanad@googlemail.com					#
+# 20-11-2017								#
+# Simple Bash To Fix Wi-Fi Card After Sniff & Crack.			#
+#########################################################################
+
+echo -e "\e[36m"
+cat /root/hs/bash/NO-MOVE-BANNERS/Program-Banner-DONT-Move
+echo -e "\e[33m"
+OPTIONS="Exit-Mother-Fucker Start-Mother-Fucking-Monitor-Mode Stop-Mother-Fucking-Monitor-Mode Check"
+select opt in $OPTIONS; do
+	echo -e "\e[36m"
+	cat /root/hs/bash/NO-MOVE-BANNERS/Program-Banner-DONT-Move
+	echo -e "\e[33m"
+	if [ "$opt" == "Exit-Mother-Fucker" ]; then
+		exit
+	elif [ "$opt" == "Start-Mother-Fucking-Monitor-Mode" ]; then
+		echo -e "\e[32mSTARTING MONITOR MODE AND KILLING SERVICES...\e[0m"
+		echo -e "\e[31mPLEASE WAIT...\e[0m"
+		sleep 5
+		airmon-ng check;
+		sleep 2
+		rfkill unblock all; airmon-ng check kill; airmon-ng start wlan0;
+		iface=`iwconfig | grep Mode:Monitor | cut -c 1-10`
+		wait;
+		echo "********************************************************"
+		ifconfig $iface down; macchanger -r $iface; ifconfig $iface up;
+		wait
+		echo "********************************************************"
+		echo -e "\e[31m"
+		macchanger -s $iface
+		echo -e "\e[0m"
+		echo  "********************************************************"
+		echo
+		echo -e "\t\t\e[31m***PRESS-ENTER***\e[0m"
+	elif [ "$opt" == "Stop-Mother-Fucking-Monitor-Mode" ]; then
+		iface=`iwconfig | grep -A 1 -B 1 Mode:Monitor | cut -c 1-10`
+		airmon-ng stop $iface
+		wait;
+		echo "********************************************************"
+		ifconfig wlan0 up; iwconfig wlan0 essid any; iwconfig wlan0 mode managed;
+		iwconfig wlan0 bit auto; iwconfig wlan0 rate auto; iwconfig wlan0 ap auto;
+		iwconfig wlan0 txpower auto; iwconfig wlan0 rts auto; iwconfig wlan0 frag auto;
+		service wpa_supplicant start; NetworkManager; rfkill list;
+		wait
+		echo "********************************************************"
+		echo "Output Above Should Say"
+		echo -e "ALL ARE \e[31mBLOCKED--NOPE!\e[0m"
+		echo "***WiFi Should be UP Please Have A LOOK ***"
+		sleep 2
+		echo "  ***ALL Tasks Done ***"
+		wait
+		echo "********************************************************"
+		echo
+		echo -e "\t\t\e[31m***PRESS-ENTER***\e[0m"
+        elif [ "$opt" == "Check" ]; then
+		echo
+                rfkill list;
+                echo "********************************************************"
+		iwconfig; iwconfig;
+                echo "********************************************************"
+		echo -e "\t\t\e[31m***PRESS-ENTER***\e[0m"
+	else
+		echo -e "\e[31m<<***SOMETHING SHIT HAPPENED ERROR***>>\e[0m"
+		echo -e "\e[31m<<***YOU SHOULD TRY ANOTHER SELECTION***>>\e[0m"
+	fi
+done

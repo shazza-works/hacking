@@ -1,0 +1,73 @@
+root@slaptop:~# wget -O- --user-agent='CyberSecretAgent' --referer='supersecret.cyberwebsite.com' http://vic.hackersacademy.com/web04/index.php -v
+--2019-05-30 14:09:06--  http://vic.hackersacademy.com/web04/index.php
+Resolving vic.hackersacademy.com (vic.hackersacademy.com)... 104.40.199.30
+Connecting to vic.hackersacademy.com (vic.hackersacademy.com)|104.40.199.30|:80... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 2052 (2.0K) [text/html]
+Saving to: ‘STDOUT’
+
+-                                       0%[                                                                        ]       0  --.-KB/s               
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <!-- Styles -->    
+    <link rel="stylesheet" href="main.css" type="text/css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" 
+            integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" 
+            crossorigin="anonymous">
+    <!-- -->
+    <title>CTF - Challenge 4</title>
+</head>
+<body>
+    
+<div class="wrapper">
+        <div class="container">
+            <h2 class="center">Discussion Board</h2>
+            <h4>Message of the Day: </h4>
+            
+            <div class="jumbotron">
+                <div class="media">
+                    <div class="media-body">
+                        <h2 class="mt-0">Update Regarding the Discussion Board</h2>
+            
+                                    
+                            <p>We decided that we would open the dicussion board to all users to engage
+                            in the discussion, we will make sure it is very secure.</p>
+                            <div class="alert alert-success">
+                                Flag is flag{G0tta_Kn0w_Y0ur_Ag3nts_and_R3f3r3rs}
+                            </div>
+
+
+                                            </div>
+                </div>
+            </div>
+        </div>
+        <footer class="footer-dark">
+            <p>&copy; 2018</p>
+        </footer>
+    </div>
+    <!-- Scripts -->    
+    <script
+        src="https://code.jquery.com/jquery-3.3.1.min.js"
+        integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+        crossorigin="anonymous">
+    </script>
+
+    <script 
+        src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" 
+        integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" 
+        crossorigin="anonymous">
+    </script>
+</body>
+-                                     100%[=======================================================================>]   2.00K  --.-KB/s    in 0s      
+
+2019-05-30 14:09:10 (38.0 MB/s) - written to stdout [2052/2052]
+
+root@slaptop:~# firefox -e wget -O- --user-agent='CyberSecretAgent' --referer='supersecret.cyberwebsite.com' http://vic.hackersacademy.com/web04/index.php -v
+Mozilla Firefox 60.6.3
+root@slaptop:~# firefox `wget -O- --user-agent='CyberSecretAgent' --referer='supersecret.cyberwebsite.com' http://vic.hackersacademy.com/web04/index.php -v`
+

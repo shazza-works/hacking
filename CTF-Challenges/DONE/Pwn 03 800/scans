@@ -1,0 +1,11 @@
+root@slaptop:~# nmap 104.40.199.30 -p 30000-40000 
+Starting Nmap 7.70 ( https://nmap.org ) at 2019-05-27 01:42 BST
+Nmap scan report for 104.40.199.30
+Host is up (0.033s latency).
+Not shown: 10000 filtered ports
+PORT      STATE SERVICE
+31337/tcp open  Elite
+
+Nmap done: 1 IP address (1 host up) scanned in 132.67 seconds
+root@slaptop:~# 
+

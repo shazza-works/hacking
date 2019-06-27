@@ -1,0 +1,50 @@
+Bash
+When scripting, you can use the following syntax:
+input="http%3A%2F%2Fwww"
+decoded=$(printf '%b' "${input//%/\\x}")
+However above syntax won't handle pluses (+) correctly, so you've to replace them with spaces via sed.
+You can also use the following urlencode() and urldecode() functions:
+urlencode() {
+    # urlencode <string>
+    local length="${#1}"
+    for (( i = 0; i < length; i++ )); do
+        local c="${1:i:1}"
+        case $c in
+            [a-zA-Z0-9.~_-]) printf "$c" ;;
+            *) printf '%%%02X' "'$c" ;;
+        esac
+    done
+}Z
+urldecode() {
+    # urldecode <string>
+
+    local url_encoded="${1//+/ }"
+    printf '%b' "${url_encoded//%/\\x}"
+}
+
+    Note that above urldecode() assumes the data contains no backslash.
+Here is similar Joel's version found at: https://github.com/sixarm/urldecode.sh
+bash + xxd
+Bash function with xxd tool:
+urlencode() {
+  local length="${#1}"
+  for (( i = 0; i < length; i++ )); do
+    local c="${1:i:1}"
+    case $c in
+      [a-zA-Z0-9.~_-]) printf "$c" ;;
+    *) printf "$c" | xxd -p -c1 | while read x;do printf "%%%s" "$x";done
+  esac
+done
+}
+Found in cdown's gist file, also at stackoverflow.
+PHP
+Using PHP you can try the following command:
+$ echo oil+and+gas | php -r 'echo urldecode(fgets(STDIN));' // Or: php://stdin
+oil and gas
+or just:
+php -r 'echo urldecode("oil+and+gas");'
+Use -R for multiple line input.
+In Perl you can use URI::Escape.
+decoded_url=$(perl -MURI::Escape -e 'print uri_unescape($ARGV[0])' "$encoded_url")
+Or to process a file:
+perl -i -MURI::Escape -e 'print uri_unescape($ARGV[0])' file

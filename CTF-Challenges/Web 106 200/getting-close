@@ -1,0 +1,5 @@
+vic.hackersacademy.com/web06/index.php?username='admin'&password=<script>alert("You've been attacked!");</Script> --
+
+running this in the login field RAN an alert for browser !!!
+
+ no i just need to get the posts!!
