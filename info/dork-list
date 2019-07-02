@@ -1,0 +1,37 @@
+   * inurl:/view.shtml<br />
+    * intitle:”Live View / &#8211; AXIS” | inurl:view/view.shtml^<br />
+    * inurl:ViewerFrame?Mode=<br />
+    * inurl:ViewerFrame?Mode=Refresh<br />
+    * inurl:axis-cgi/jpg<br />
+    * inurl:axis-cgi/mjpg (motion-JPEG)<br />
+    * inurl:view/indexFrame.shtml<br />
+    * inurl:view/index.shtml<br />
+    * inurl:view/view.shtml<br />
+    * liveapplet<br />
+    * intitle:”live view” intitle:axis<br />
+    * intitle:liveapplet<br />
+    * allintitle:”Network Camera NetworkCamera”<br />
+    * intitle:axis intitle:”video server”<br />
+    * intitle:liveapplet inurl:LvAppl<br />
+    * intitle:”EvoCam” inurl:”webcam.html”<br />
+    * intitle:”Live NetSnap Cam-Server feed”<br />
+    * intitle:”Live View / &#8211; AXIS”<br />
+    * intitle:”Live View / &#8211; AXIS 206M”<br />
+    * intitle:”Live View / &#8211; AXIS 206W”<br />
+    * intitle:”Live View / &#8211; AXIS 210″<br />
+    * inurl:indexFrame.shtml Axis<br />
+    * inurl:”MultiCameraFrame?Mode=Motion”<br />
+    * intitle:start inurl:cgistart<br />
+    * intitle:”WJ-NT104 Main Page”<br />
+    * intext:”MOBOTIX M1″ intext:”Open Menu”<br />
+    * intext:”MOBOTIX M10″ intext:”Open Menu”<br />
+    * intext:”MOBOTIX D10″ intext:”Open Menu”<br />
+    * intitle:snc-z20 inurl:home/<br />
+    * intitle:snc-cs3 inurl:home/<br />
+    * intitle:snc-rz30 inurl:home/<br />
+    * intitle:”sony network camera snc-p1″<br />
+    * intitle:”sony network camera snc-m1″<br />
+    * site:.viewnetcam.com -www.viewnetcam.com<br />
+    * intitle:”Toshiba Network Camera” user login<br />
+    * intitle:”netcam live image”<br />
+    * intitle:”i-Catcher Console &#8211; Web Monitor”</p>
